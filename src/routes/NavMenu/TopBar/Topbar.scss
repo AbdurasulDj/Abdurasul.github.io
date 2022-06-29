@@ -1,0 +1,76 @@
+@import '../../../_variables';
+
+.topbar-container {
+    position: fixed;
+    color: white;
+    top: 0;
+    height: 10vh;
+    width: 100%;
+    background-color: transparent;
+    z-index: 10;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    transition: all 2s ease;
+
+
+    .wrapper {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 3rem;
+
+
+        &-left {
+
+
+            &--logo {
+                height: 5rem;
+                width: 5rem;
+            }
+        }
+
+        &-right {
+            .hamburger{
+                width: 2.5rem;
+                height: 2.725rem;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                // align-items: center;
+                cursor: pointer;
+                overflow: hidden;
+                
+                span {
+                    width: 100%;
+                    height: .3rem;
+                    background-color: #fff;
+                    transform-origin: left;
+                    transition: all 2s ease;
+                }
+            }
+        }
+    }
+    &.active {
+        background-color: $mainRGBA;
+
+        .hamburger{
+            span:first-child {
+                transform: rotate(45deg);
+            }
+
+            span:nth-child(2) {
+                opacity: 0;
+            }
+
+            span:last-child {
+                transform: rotate(-45deg);
+            }
+        }
+    }       
+}

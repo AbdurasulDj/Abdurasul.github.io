@@ -1,0 +1,53 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+  }
+
+.app-container{
+  height: 100vh;
+  position: relative;
+  background-color: #141429;
+  color: white;
+  
+  .sections-container {
+    height: 100vh; // -1ovh of topbar
+    width: 100vw;
+    z-index: 1;
+    position: relative;
+    // top: 10vh; // we have topbar
+    scroll-behavior: smooth;
+    scroll-snap-type: block mandatory;
+    scrollbar-width: none;
+    &::-webkit-scrollbar{
+      display: none;
+    }
+    
+    > * {
+      width: 100vw;
+      height: 100vh; // -1ovh of topbar
+      scroll-snap-align: start;
+      // backdrop-filter: blur(5px);
+    }
+  }
+  
+  .bubble{
+    z-index: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    &.bubble-one{
+      background: linear-gradient(#f00000, #f0f);
+      clip-path: circle(30% at right 70%);
+    }
+
+    &.bubble-two{
+      background: linear-gradient(#2196f3, #e91e63);
+      clip-path: circle(20% at 10% 10%);
+    }
+  }
+}

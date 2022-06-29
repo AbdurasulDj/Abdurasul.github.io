@@ -1,0 +1,127 @@
+@import '../../_variables';
+
+.aboutme-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .aboutme-card-container {
+        height: 80vh;
+        width: 80vw;
+        background-color: $mainBoxBackground;
+        box-shadow: $mainBoxShadow;
+        border-left: $mainBorder;
+        border-top: $mainBorder;
+        backdrop-filter: blur(5px);
+        border-radius: 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        
+        .aboutme--header{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+            height: 20%;
+
+            h2 {
+                font-size: 2em;
+                font-weight: 700;
+            }
+            h4{ 
+                font-weight: 300;
+                font-family: 'Merriweather', serif;
+            }
+
+            div {
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                height: 1rem;
+                
+                span:first-child {
+                    width: 100%;
+                    height: .2rem;
+                    border-radius: 10%;
+                    background-color: rgb(0, 255, 255); 
+                }
+                
+                span:last-child {
+                    width: 40%;
+                    height: .2rem;
+                    border-radius: 10%;
+                    background-color: rgb(0, 255, 255);
+                    position: absolute;
+                    z-index: -1;
+                    box-shadow: 0 0 .5rem .1rem rgb(0, 255, 0);
+                    animation: shyning 2s ease infinite;
+                }
+
+                @keyframes shyning {
+                    0% { width: 40%; }
+                    25% { width: 45%; box-shadow: 0 0 .5rem .1rem rgb(0, 255, 255);}
+                    50% { width: 45%; box-shadow: 0 0 .5rem .1rem rgb(0, 255, 255);}
+                    75% { width: 45%; box-shadow: 0 0 .5rem .1rem rgb(0, 255, 255);}
+                    100% { width: 40%; }
+                }
+            }
+        }
+
+        .aboutme--content {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: flex-start;
+            height: 55%;
+            width: 90%;
+            font-weight: 500;
+            letter-spacing: 0.1rem;
+            line-height: 2rem;
+            
+            >*{
+                overflow: hidden;
+            }
+
+            // div:nth-child(1){
+            //     font-family: 'Merriweather', serif;
+
+            // }
+
+            .aboutme--highlights {
+                margin-top: 2rem;
+                font-family: 'Merriweather', serif;
+                ul {
+                    font-family: 'Inconsolata', monospace;
+                    margin-top: 1rem;
+                    list-style-type: none;
+                    list-style-position: inside;
+                    
+                    li {
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: flex-start;
+                        align-items: center;
+                        line-height: 2.3rem;
+                    }
+                    
+                    li::before {
+                        content: "";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+                        display: block; /* Needed to add space between the bullet and the text */
+                        width: .5rem; /* Also needed for space (tweak if needed) */
+                        height: .5rem;
+                        background-color: rgb(0, 255, 0);
+                        border-radius: 50%;
+                        margin: 0 1rem;
+                    }
+                }
+                
+            }
+        }
+    }
+}

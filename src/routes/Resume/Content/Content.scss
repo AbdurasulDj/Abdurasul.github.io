@@ -1,0 +1,31 @@
+.resume-content-container {
+    height: 60vh;
+    width: 60vw;
+    margin-top: 6.5vh;
+    overflow: hidden; 
+    scroll-behavior: smooth;
+    scroll-snap-type: block mandatory;
+    scrollbar-width: none;
+    &::-webkit-scrollbar{
+        display: none;
+    }
+
+    .headers{
+        height: 10vh;
+        width: 60vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .resume-content {
+        height: 60vh;
+        width: 60vw;
+        overflow: hidden; 
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-direction: column;
+        
+    }
+}
