@@ -47,8 +47,8 @@ export default function Headers() {
 
   const li = headers.map( obj => {
     return (
-      <li  key={obj.icon} onClick={() => clickHandler(obj.icon)} className={obj.active ? 'active' : ''}> 
-        <a href={obj.href}>
+      <li  key={obj.icon}  className={obj.active ? 'active' : ''}> 
+        <a onClick={() => clickHandler(obj.icon)} href={obj.href}>
           <ion-icon name={obj.icon}></ion-icon>
         </a>
         <span className='icon-span'></span>

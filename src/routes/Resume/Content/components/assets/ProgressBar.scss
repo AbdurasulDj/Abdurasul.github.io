@@ -1,0 +1,15 @@
+.progressBar-container{
+    width: 100%;
+    background-color: transparent;
+    border: 1px solid white;
+    border-radius: 1rem;
+
+    .progressBar{
+        width: 10%;
+        height: 5vh;
+        border-radius: 1rem;
+        background-color: white;
+        text-align: center;
+        color: black;
+    }
+}
