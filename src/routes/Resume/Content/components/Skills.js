@@ -1,60 +1,65 @@
 import './Skills.scss'
+import React from 'react'
 import ProgressBar from './assets/ProgressBar'
 
-// html-70 
-// css-65 
-// sass-60 
-// react-55 
-// git-50 
-// linux + figma- 35 
 
-export default function Skills() {
+export default function Skills(props) {
+
+    const [ skillsState, setSkillsState] = React.useState([
+        {
+            name: 'HTML',
+            value: 80
+        },
+        {
+            name: 'CSS',
+            value: 70
+        },
+        {
+            name: 'Sass',
+            value: 60
+        },
+        {
+            name: 'React',
+            value: 55
+        },
+        {
+            name: 'Git + Linux + Figma',
+            value: 50
+        },
+        {
+            name: 'Communication',
+            value: 80
+        },
+    ])
+
+    const [isActive, setIsActive] = React.useState( false)
+
+    React.useEffect( ()=> {
+        if (props.skillsClicked === true) {
+            setIsActive( true)
+            
+        } else {
+            setIsActive( false)
+        }
+
+    }, [props.skillsClicked])
+    
+
+    const elem = skillsState.map( el => {
+        return(
+            <div className="skill-container" key={el.name} >
+                <h3>{el.name}</h3>
+                <ProgressBar 
+                    elId={el.name}
+                    finalValue = {el.value}
+                    isActive = {isActive}
+                />
+            </div>
+        )
+    })
     return (
         <div className="skills-container">
-            <div className="skill-container" >
-                <h3>HTML</h3>
-                <ProgressBar 
-                    elId='html'
-                    finalValue = '80'
-                    isActive = {true}
-                />
-            </div>
-            <div className="skill-container" >
-                <h3>HTML</h3>
-                <ProgressBar 
-                    elId='css'
-                    finalValue = '70'
-                    isActive = {true}
-                />
-            </div>
-            <div className="skill-container" >
-                <h3>HTML</h3>
-                <ProgressBar 
-                    elId='react'
-                    finalValue = '50'
-                    isActive = {true}
-                />
-            </div>
-
-            <div className="skill-container">
-                <h3>HTML</h3>
-                <ProgressBar 
-                    finalValue = '80'
-                    isActive = {true}
-                />
-            </div><div className="skill-container">
-                <h3>HTML</h3>
-                <ProgressBar 
-                    finalValue = '80'
-                    isActive = {true}
-                />
-            </div><div className="skill-container">
-                <h3>HTML</h3>
-                <ProgressBar 
-                    finalValue = '80'
-                    isActive = {true}
-                />
-            </div>
+            {elem}
         </div>
     )
 };

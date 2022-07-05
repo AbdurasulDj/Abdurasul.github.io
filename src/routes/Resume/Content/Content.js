@@ -5,7 +5,7 @@ import Skills from './components/Skills'
 import Projects from './components/Projects'
 import Interests from './components/Interests'
 
-export default function Content() {
+export default function Content(props) {
   return (
     <div className="resume-content-container">
           <div className='resume-content' id="resume-education">
@@ -25,7 +25,9 @@ export default function Content() {
             <div className="headers">
               <h1>Skills</h1>
             </div>
-            <Skills/>
+            <Skills 
+              skillsClicked={props.skillsClicked}
+            />
           </div>
           <div className='resume-content' id="resume-projects">
             <div className="headers">

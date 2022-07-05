@@ -4,12 +4,11 @@ import React from 'react'
 export default function ProgressBar({ elId ,finalValue, isActive}) {
     React.useEffect(()=> {
         let i = 0;
-
         if (i === 0) {
             i = 1;
             let el = document.getElementById(elId);
             let width = 10;
-            let id = setInterval( frame, 10)
+            let id = setInterval( frame, 20)
             function frame(){
                 if( width >= finalValue) {
                     clearInterval(id);

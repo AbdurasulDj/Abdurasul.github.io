@@ -1,39 +1,10 @@
 import './Headers.scss'
 import React from 'react'
 
-export default function Headers() {
-
-  const [headers, setHeaders] = React.useState([
-    {
-      active: true,
-      href: "#resume-education",
-      icon: 'school',
-    },
-    {
-      active: false,
-      href: "#resume-history",
-      icon: 'briefcase',
-    },
-    {
-      active: false,
-      href: "#resume-skills",
-      icon: 'code-slash',
-    },
-    {
-      active: false,
-      href: "#resume-projects",
-      icon: 'bar-chart',
-    },
-    {
-      active: false,
-      href: "#resume-interests",
-      icon: 'game-controller',
-    }
-  ])
-
+export default function Headers(props) {
+  
   function clickHandler(icon) {
-    setHeaders( oldHeaders => oldHeaders.map( obj => {
-
+    props.setHeaders( oldHeaders => oldHeaders.map( obj => {
         if (obj.icon === icon) {
           return obj.active === true ?
             { ...obj} 
@@ -45,11 +16,11 @@ export default function Headers() {
     )
   }
 
-  const li = headers.map( obj => {
+  const li = props.headers.map( obj => {
     return (
       <li  key={obj.icon}  className={obj.active ? 'active' : ''}> 
-        <a onClick={() => clickHandler(obj.icon)} href={obj.href}>
-          <ion-icon name={obj.icon}></ion-icon>
+        <a onClick={() => clickHandler(obj.icon) } href={obj.href}>
+          <ion-icon name={obj.icon} onClick={() => props.handleSkillsClicked(obj.icon)}></ion-icon>
         </a>
         <span className='icon-span'></span>
       </li>
