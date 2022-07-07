@@ -32,6 +32,9 @@ export default function Skills(props) {
         },
     ])
 
+
+    // activate on skills click
+
     const [isActive, setIsActive] = React.useState( false)
 
     React.useEffect( ()=> {
