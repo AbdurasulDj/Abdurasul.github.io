@@ -3,6 +3,7 @@
     background-color: transparent;
     border: 1px solid white;
     border-radius: 1rem;
+    overflow: hidden;
 
     .progressBar{
         width: 10%;
@@ -11,5 +12,15 @@
         background-color: white;
         text-align: center;
         color: black;
+        overflow: hidden;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .progressBar-container{
+    
+        .progressBar{
+            font-size: 1.4rem;
+        }
     }
 }

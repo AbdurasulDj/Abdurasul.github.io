@@ -24,12 +24,94 @@
     .interest-info{
         &_name {
             font-family: 'Merriweather', serif;
+            overflow: hidden;
 
         }
 
         &_description {
             margin-top: 1rem;
+            overflow: hidden;
             
+        }
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .interest-info{
+        &_name {
+            font-size: 1.6rem;
+
+        }
+
+        &_description {
+            margin-top: 0.5rem;
+            font-size: 1.5rem;
+            
+        }
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .interests-container{
+        .interest-info{
+            &_name {
+                font-size: 1.4rem;
+
+            }
+
+            &_description {
+                margin-top: 0.5rem;
+                font-size: 1.4rem;
+                line-height: 1.8rem;
+                
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 680px) {
+    .interests-container{
+
+        .dot-container{
+
+            .dot{
+                width: .5rem;
+                height: .5rem;
+                border-radius: .5rem;
+                
+            }
+        }
+        
+        .interest-info{
+            &_name {
+                font-size: 1.2rem;
+                
+            }
+            
+            &_description {
+                font-size: 1.2rem;
+                line-height: 1.5rem;
+                
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 430px) {
+    .interests-container{
+        .interest-info{
+            &_name {
+                font-size: 1rem;
+
+            }
+
+            &_description {
+                // margin-top: 0.5rem;
+                font-size: 1rem;
+                line-height: 1.3rem;
+                
+            }
         }
     }
 }

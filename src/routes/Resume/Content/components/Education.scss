@@ -38,3 +38,87 @@
         
     }
 }
+
+@media screen and (max-width: 1000px) {
+    .education-info{
+        &_name {
+            font-size: 1.4rem;
+
+        }
+
+        &_degree {
+            margin-top: .5rem;
+            font-size: 1.5rem;
+        }
+    }
+
+    .education-years{
+        font-size: 1.5rem;        
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .education-info{
+        &_name {
+            font-size: 1.3rem;
+
+        }
+
+        &_degree {
+            margin-top: .5rem;
+            font-size: 1.4rem;
+        }
+    }
+
+    .education-years{
+        font-size: 1.3rem;        
+    }
+}
+
+@media screen and (max-width: 680px) {
+    .education-container{
+        .dot-container{
+
+            .dot{
+                width: .5rem;
+                height: .5rem;
+                border-radius: .5rem;
+                
+            }
+        }
+
+        .education-info{
+            &_name {
+                font-size: 1.1rem;
+
+            }
+
+            &_degree {
+                margin-top: .25rem;
+                font-size: 1.2rem;
+            }
+        }
+
+        .education-years{
+            font-size: 1.1rem;        
+        }
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .education-info{
+        &_name {
+            font-size: 1rem;
+
+        }
+
+        &_degree {
+            // margin-top: .25rem;
+            font-size: 1rem;
+        }
+    }
+
+    .education-years{
+        font-size: 1rem;        
+    }
+}

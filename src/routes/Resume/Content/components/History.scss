@@ -38,3 +38,54 @@
         
     }
 }
+
+@media screen and (max-width: 800px) {
+    .history-container{
+        
+        .history-info{
+            &_name {
+                font-size: 1.4rem;
+            }
+    
+            &_position {
+                margin-top: 1rem;
+                font-size: 1.4rem;
+                
+            }
+        }
+    
+        .history-years{
+            font-size: 1.4rem;            
+        }
+    }
+}
+
+@media screen and (max-width: 680px) {
+    .history-container{
+        .dot-container{
+
+            .dot{
+                width: .5rem;
+                height: .5rem;
+                border-radius: .5rem;
+                
+            }
+        }
+        
+        .history-info{
+            &_name {
+                font-size: 1.1rem;
+            }
+    
+            &_position {
+                margin-top: .5rem;
+                font-size: 1.2rem;
+                
+            }
+        }
+    
+        .history-years{
+            font-size: 1.1rem;            
+        }
+    }
+}

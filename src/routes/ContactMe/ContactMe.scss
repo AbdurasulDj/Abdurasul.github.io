@@ -103,7 +103,6 @@
 
             #submit {
                 font-family: 'Merriweather', serif;
-
                 background: transparent;
                 color: white;
                 height: 10%;
@@ -134,6 +133,19 @@
             input::-ms-input-placeholder, textarea::-ms-input-placeholder {
                 color: white;
                 // padding: 1rem;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 540px) {
+    .contactme-container {
+        .contactme-card-container {
+            form {
+                #submit {
+                    height: 10%;
+                    width: 20%;
+                }
             }
         }
     }

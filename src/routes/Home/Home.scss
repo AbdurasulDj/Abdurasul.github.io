@@ -85,3 +85,35 @@
     }
 }
 
+@media screen and (max-width: 370px) {
+    
+.home-container{
+
+    .profile-container {
+
+        .social-media-container {
+
+            gap: .5rem;
+            margin-bottom: 1.5rem;
+            font-size: 1.4rem; 
+        }
+
+        h1 {
+            font-size: 1em;
+            font-weight: 500;
+            margin-bottom: 1.5rem;
+        }
+
+        .typewritter{
+            font-size: 1em;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+        }
+
+        p {
+            font-weight: 500;
+            font-size: 1.4rem;
+        }
+    }
+}
+}
