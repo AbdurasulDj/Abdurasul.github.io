@@ -112,6 +112,11 @@
                 border: $mainBorder;
                 border-radius: .5rem;
                 z-index: 100;
+                cursor: pointer;
+
+                ion-icon{
+                    color:rgb(0, 255, 0);
+                }
             }
 
             #submit:active {
