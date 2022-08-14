@@ -2,8 +2,9 @@ import React, {useRef} from 'react';
 import emailjs from '@emailjs/browser';
 import './ContactMe.scss'
 
-export default function ContactMe() {
+// SHOW WARNING popup from right bottom corner
 
+export default function ContactMe() {
   // state of form data
   const [formData, setFormData] = React.useState({
     user_name: '',
@@ -14,6 +15,8 @@ export default function ContactMe() {
   // state of data sent or not
   const [sent, setSent] = React.useState(false)
   
+  // state of form filled or not
+  const [buttonDisabled, setButtonDisabled] = React.useState(true)
 
   // store form data in state
   function handleChange(event) {
@@ -25,17 +28,22 @@ export default function ContactMe() {
     })
   }
 
-  // check if form filled and trigger send button
-  React.useEffect( () => {
+  // check form filled or not 
+  function checkFill() {
     if (
       formData.user_name.length >= 2 &&
       formData.user_email.length >= 5 &&
-      formData.message.length >= 15
+      formData.message.length >= 10
     )  {
-      console.log('g message')
+      setButtonDisabled(false)
     } else {
-      console.log('b message')
+      setButtonDisabled(true)
     }
+  } 
+
+  //  trigger send button
+  React.useEffect( () => {
+    checkFill()
   }, [formData])
 
 
@@ -48,10 +56,8 @@ export default function ContactMe() {
     emailjs.sendForm('service_q1ticzm', 'template_twkixn9', form.current, 'x0jRGgktNpxClXGtk')
       .then((result) => {
           setSent(true)
-          console.log('set to true');
           const myTimer = setTimeout(() => {
             setSent(false)
-            console.log('set to false');
             clearTimeout(myTimer)
           }, 5000);
       }, (error) => {
@@ -81,17 +87,24 @@ export default function ContactMe() {
             <span></span>
           </div>
         </div>
-        <form ref={form} onSubmit={sendEmail}>
-          <input type="text" name="user_name" onChange={handleChange} placeholder="Your name" value={formData.name}/>
+        <form ref={form} onSubmit={buttonDisabled ? '' : sendEmail}>
+          <input type="text" name="from_name" onChange={handleChange} placeholder="Your name" value={formData.name}/>
           <input type="email" name="user_email" onChange={handleChange} placeholder="Your email" value={formData.email} />
           <textarea name="message" onChange={handleChange} placeholder="Your message" value={formData.message}/>
-          <button id='submit'>
-            Send
-            <span style={sent ? displaedCheck : hiddenCheck}>
-              &nbsp;
-              <ion-icon name="checkmark-outline"></ion-icon>
-            </span>
-          </button>
+          
+          {/* disable button depending on form filled or not */}
+            <button 
+              id='submit' 
+              disabled={buttonDisabled}
+              className={buttonDisabled ? 'disabledButton' : ''}
+            >
+              Send
+              <span style={sent ? displaedCheck : hiddenCheck}>
+                &nbsp;
+                <ion-icon name="checkmark-outline"></ion-icon>
+              </span>
+            </button>
+          
         </form>
       </div>
     </div>
