@@ -1,6 +1,10 @@
+import { useTranslation } from 'react-i18next';
+
 import './Projects.scss'
 
 export default function Projects() {
+    const {t} = useTranslation()
+    
     return(
         <>
             <div className="projects-container">
@@ -10,8 +14,7 @@ export default function Projects() {
                 <div className="project-info" >
 
                     <div className="project-info_description">
-                        Landing page of gesys.uz where I worked at, made
-                        using HTML,CSS, Bootstrap 4 and JavaScript.
+                        {t('gesys_paragraph')}
                     </div>
                 </div>              
                 <div className="project-url">
@@ -26,10 +29,8 @@ export default function Projects() {
                     <div className="dot"></div>
                 </div>              
                 <div className="project-info" >
-
                     <div className="project-info_description">
-                        Landing page , made
-                        using HTML,CSS and JavaScript.
+                        {t('puremilky_paragraph')}
                     </div>
                 </div>              
                 <div className="project-url">
@@ -45,12 +46,11 @@ export default function Projects() {
                 </div>              
                 <div className="project-info" >
                     <div className="project-info_description">
-                        First version of my portfolio site, made
-                        using HTML,CSS, Sass and JavaScript.
+                        {t('first_site_paragraph')}
                     </div>
                 </div>              
                 <div className="project-url">
-                    <a href="http://www.gesys.uz" target="_blank" rel="noopener noreferrer">
+                    <a href="http://www.Abdurasul.dev/version1" target="_blank" rel="noopener noreferrer">
                         Abdurasul.dev
                     </a>
                 </div>

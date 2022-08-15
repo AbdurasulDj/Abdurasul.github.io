@@ -1,8 +1,12 @@
+import { useTranslation } from 'react-i18next';
+
 import './Interests.scss'
 
 
 // traveling video-games programming
 export default function Interests() {
+    const {t} = useTranslation()
+    
     return(
         <>
             <div className="interests-container">
@@ -11,11 +15,10 @@ export default function Interests() {
                 </div>              
                 <div className="interest-info" >
                     <div className="interest-info_name">
-                        Traveling
+                        {t('traveling')}
                     </div>
                     <div className="interest-info_description">
-                        I'd like to see other cultures, places, meet new friends
-                        find something that I want to.
+                        {t('traveling_paragraph')}
                     </div>
                 </div>              
 
@@ -27,11 +30,10 @@ export default function Interests() {
                 </div>              
                 <div className="interest-info" >
                     <div className="interest-info_name">
-                        Video-games
+                        {t('video_games')}
                     </div>
                     <div className="interest-info_description">
-                        I love wasting my time on MLBB (Mobile legends bang bang), 
-                        Genshin (Genshin Impact), Apex (Apex legends mobile) and WarCraft.
+                        {t('video_games_paragraph')}
                     </div>
                 </div>              
 
@@ -43,12 +45,10 @@ export default function Interests() {
                 </div>              
                 <div className="interest-info" >
                     <div className="interest-info_name">
-                        Programming
+                        {t('programming')}
                     </div>
                     <div className="interest-info_description">
-                        Its interesting how people created such things as programming and machines.
-                        Its all started from making fire with woods and rocks and
-                        I do want to have my own impact on the future of this revolution.
+                        {t('programming_paragraph')}
                     </div>
                 </div>              
 

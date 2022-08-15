@@ -1,10 +1,15 @@
 import React, {useRef} from 'react';
 import emailjs from '@emailjs/browser';
+import { useTranslation } from 'react-i18next';
+
 import './ContactMe.scss'
 
 // SHOW WARNING popup from right bottom corner
 
 export default function ContactMe() {
+  // i18n
+  const { t} = useTranslation();
+
   // state of form data
   const [formData, setFormData] = React.useState({
     user_name: '',
@@ -81,16 +86,36 @@ export default function ContactMe() {
     <div className="contactme-container" id='contactMe'>
       <div className='contactme-card-container'>
         <div>
-          <h1>Contact me</h1>
+          <h1>{t('contact_me')}</h1>
           <div className="shyning">
             <span></span>
             <span></span>
           </div>
         </div>
-        <form ref={form} onSubmit={buttonDisabled ? '' : sendEmail}>
-          <input type="text" name="from_name" onChange={handleChange} placeholder="Your name" value={formData.name}/>
-          <input type="email" name="user_email" onChange={handleChange} placeholder="Your email" value={formData.email} />
-          <textarea name="message" onChange={handleChange} placeholder="Your message" value={formData.message}/>
+        <form ref={form} onSubmit={buttonDisabled ? ()=>{return} : sendEmail()}>
+          <input 
+            type="text" 
+            name="from_name" 
+            onChange={handleChange}
+            placeholder={t('your_name')} 
+            value={formData.name}
+
+            />
+          <input 
+            type="email" 
+            name="user_email" 
+            onChange={handleChange}
+            placeholder={t('your_email')} 
+            value={formData.email} 
+
+            />
+          <textarea 
+            name="message" 
+            onChange={handleChange} 
+            placeholder={t('your_message')}
+            value={formData.message}
+
+            />
           
           {/* disable button depending on form filled or not */}
             <button 
@@ -98,13 +123,12 @@ export default function ContactMe() {
               disabled={buttonDisabled}
               className={buttonDisabled ? 'disabledButton' : ''}
             >
-              Send
+              {t('send')}
               <span style={sent ? displaedCheck : hiddenCheck}>
                 &nbsp;
                 <ion-icon name="checkmark-outline"></ion-icon>
               </span>
             </button>
-          
         </form>
       </div>
     </div>

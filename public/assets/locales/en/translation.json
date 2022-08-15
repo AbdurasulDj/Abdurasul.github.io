@@ -1,0 +1,59 @@
+
+{
+    "about_me": "About me",
+    "why_choose_me" : "Why Choose Me?",
+    "about_me_paragraph": "Front-end web developer with knowledge of ReactJs and ability to build complex applications with utmost efficiency. Strong professional and communication skills.",
+    "about_me_highlights": "Here are a Few Highlights:",
+    "about_me_li_1":  "Frontend web development",
+    "about_me_li_2":  "Interactive Front End as per the design",
+    "about_me_li_3":  "Sass and scss lightweight and fast",
+    "about_me_li_4":  "JavaScript and Es6+ dominant of front-end",
+    "about_me_li_5":  "ReactJs one of the most popular technologies",
+    "about_me_li_6":  "Git for source control",
+
+    "contact_me": "Contact me",
+    "your_name": "Your name",
+    "your_email": "Your email",
+    "your_message": "Your message",
+    "send": "Send",
+
+    "hello_im": "Hello, I'm ",
+    "Abdurasul": "Abdurasul",
+    "frontend_developer": "Front-end developer",
+    "cross_platform_dev": "Cross Platform dev",
+    "javascript_react": "JavaScript / ReactJs",
+    "self_made_dev": "Self-made dev 😎",
+    "enthusiastic_about_web_dev_world": "Enthusiastic about web dev world 🌍.",
+
+    "home_page": "Home page",
+    "resume": "Resume",
+    "contact_me_menu": "Contact Me",
+    "uz": "Uz",
+    "ru": "Ru",
+    "en": "Eng",
+
+    "education": "Education",
+    "work_history": "Work history",
+    "skills": "Skills",
+    "projects": "Projects",
+    "interests": "Interests",
+
+    "tashkent_tec_university": "TASHKENT STATE TECHNICAL UNIVERSITY NAMED AFTER ISLAM KARIMOV",
+    "bachelor_degree": "Bachelor degree",
+    "present": "Present",
+    "tuit_liceum": "Muhammad al-Khwarizmi TUIT Academic Lyceum",
+    "basic_education": "Basic education",
+
+    "traveling": "Traveling",
+    "traveling_paragraph": "I'd like to see other cultures, places, meet new friends find something that I want to.",
+    "video_games": "Video-games",
+    "video_games_paragraph": "I love wasting my time on MLBB (Mobile legends bang bang), Genshin (Genshin Impact), Apex (Apex legends mobile) and WarCraft.",
+    "programming": "Programming",
+    "programming_paragraph": "Its interesting how people created such things as programming and machines. Its all started from making fire with woods and rocks and I do want to have my own impact on the future of this revolution.",
+
+    "gesys_paragraph": "Landing page of gesys.uz where I worked at, made using HTML,CSS, Bootstrap 4 and JavaScript.",
+    "puremilky_paragraph": "Landing page , made using HTML,CSS and JavaScript.",
+    "first_site_paragraph": "First version of my portfolio site, made using HTML,CSS, Sass and JavaScript.",
+
+    "communication" : "Communication"
+}

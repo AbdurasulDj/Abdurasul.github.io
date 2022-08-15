@@ -1,14 +1,15 @@
 import React from 'react';
-import './Home.scss'
-
-import Photo from "./photo.jpg"
-
 import Typewriter from "typewriter-effect";
-
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {  brands } from '@fortawesome/fontawesome-svg-core/import.macro'
+import { useTranslation } from 'react-i18next';
+
+import './Home.scss'
+import Photo from "./photo.jpg"
 
 export default function Home() {
+  const { t } = useTranslation();
+
   return (
     <div className='home-container' id='home'>
       <div className="profile-container">
@@ -46,7 +47,7 @@ export default function Home() {
           </div>
         </div>
 
-        <h1>Hello, I'm <span>Abdurasul</span> </h1>
+        <h1>{t('hello_im')} <span>{t('Abdurasul')}</span> </h1>
 
         <div className="typewritter">
           <Typewriter
@@ -60,19 +61,19 @@ export default function Home() {
       
           typewriter
 
-          .typeString("Front-end developer")
+          .typeString(t('frontend_developer'))
             
           .pauseFor(500)
           .deleteAll()
-          .typeString("Cross Platform dev ")
+          .typeString(t('cross_platform_dev'))
           
           .pauseFor(500)
           .deleteAll()
-          .typeString("JavaScript / ReactJs ")
+          .typeString(t('javascript_react'))
 
           .pauseFor(500)
           .deleteAll()
-          .typeString("Self-made dev 😎")
+          .typeString(t('self_made_dev'))
           .pauseFor(500)
           
           .start()
@@ -81,7 +82,7 @@ export default function Home() {
         </div>
 
         <p>
-          Enthusiast about web dev world 🌍.
+          {t('enthusiastic_about_web_dev_world')}
         </p>
       </div>
     </div>

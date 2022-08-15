@@ -1,6 +1,10 @@
+import { useTranslation } from 'react-i18next';
+
 import './History.scss'
 
 export default function History() {
+    const {t} = useTranslation()
+    
     return(
         <>
             <div className="history-container">
@@ -12,7 +16,7 @@ export default function History() {
                         GeSys.uz 
                     </div>
                     <div className="history-info_position">
-                        Frontend web developer
+                        {t('frontend_developer')}
                     </div>
                 </div>              
                 <div className="history-years">

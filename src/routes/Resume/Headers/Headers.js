@@ -1,8 +1,10 @@
-import './Headers.scss'
 import React from 'react'
+
+import './Headers.scss'
 
 export default function Headers(props) {
   
+  // hadle li click and toggle animations
   function clickHandler(icon) {
     props.setHeaders( oldHeaders => oldHeaders.map( obj => {
         if (obj.icon === icon) {
@@ -16,7 +18,10 @@ export default function Headers(props) {
     )
   }
 
-  const li = props.headers.map( obj => {
+  // map lists 
+  let li='';
+  if (props.headers !== []) {
+  li = props.headers.map(  obj => {
     return (
       <li  key={obj.icon}  className={obj.active ? 'active' : ''}> 
         <a onClick={() => clickHandler(obj.icon) } href={obj.href}>
@@ -26,7 +31,10 @@ export default function Headers(props) {
       </li>
     )
   })
-  
+  } else {
+    return 
+  }
+
   return (
     <div className="resume-headers-container">
       <ul>

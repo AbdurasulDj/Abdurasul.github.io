@@ -1,13 +1,17 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
+
 import './AboutMe.scss'
 
 export default function AboutMe() {
+  const { t } = useTranslation();
+
   return (
     <div className='aboutme-container' id='aboutMe'>
         <div className="aboutme-card-container">
           <div className="aboutme--header">
-            <h2>About me</h2>
-            <h4>Why Choose Me?</h4>
+            <h2>{t('about_me')}</h2>
+            <h4>{t('why_choose_me')}</h4>
             <div>
               <span></span>
               <span></span>
@@ -16,36 +20,30 @@ export default function AboutMe() {
           <div className="aboutme--content">
             <div>
               <p>
-                Front-end web developer with 
-                knowledge of ReactJs and ability to
-                build complex applications with utmost efficiency.
-                Strong professional and communication skills.
+              {t('about_me_paragraph')}
               </p>
             </div>
 
             <div className="aboutme--highlights">
-              <p>Here are a Few Highlights:</p>
+              <p>{t('about_me_highlights')}</p>
               <ul>
                 <li>
-                  Frontend web development
+                  {t('about_me_li_1')}
                 </li>
                 <li>
-                  Interactive Front End as per the design
+                  {t('about_me_li_2')}
                 </li>
                 <li>
-                  Sass and scss 
-                  lightweight and fast
+                  {t('about_me_li_3')}
                 </li>
                 <li>
-                  JavaScript and Es6+
-                  dominant of front-end
+                  {t('about_me_li_4')}
                 </li>
                 <li>
-                  ReactJs one of the most
-                  popular technologies
+                  {t('about_me_li_5')}
                 </li>
                 <li>
-                  Git for source control
+                  {t('about_me_li_6')}
                 </li>
               </ul>
             </div>

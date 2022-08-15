@@ -1,0 +1,27 @@
+[
+    {
+        "active": true,
+        "href": "#resume-education",
+        "icon": "school"
+    },
+    {
+        "active": false,
+        "href": "#resume-history",
+        "icon": "briefcase"
+    },
+    {
+        "active": false,
+        "href": "#resume-skills",
+        "icon": "code-slash"
+    },
+    {
+        "active": false,
+        "href": "#resume-projects",
+        "icon": "bar-chart"
+    },
+    {
+        "active": false,
+        "href": "#resume-interests",
+        "icon": "game-controller"
+    }
+]

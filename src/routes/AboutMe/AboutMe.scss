@@ -193,27 +193,76 @@
             }
     
             .aboutme--content {
-                font-size: 1.4rem;
+                font-size: 1.6rem;
                 font-weight: 500;
                 letter-spacing: 0.1rem;
                 line-height: 1.6rem;
+                margin-top: -4rem;
                 
                 >*{
                     overflow: hidden;
                 }
     
                 .aboutme--highlights {
-                    margin-top: 1rem;
+                    margin-top: .5rem;
                     
                     p {
-                        font-size: 1.2rem;
+                        font-size: 1.5rem;
+                        line-height: 1.8rem;
                     }
 
                     ul {
                         margin-top: .5rem;
                         
                         li {
-                            line-height: 2.3rem;
+                            line-height: 1.8rem;
+                            font-size: 1.4rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 493px) {
+    .aboutme-container{
+
+        .aboutme-card-container {
+        
+            .aboutme--header{
+                h2 {
+                    font-size: 1.5em;
+                }
+
+                h4{ 
+                    font-size: 1rem;
+                }
+            }
+    
+            .aboutme--content {
+                font-size: 1.3rem;
+                font-weight: 500;
+                letter-spacing: 0.1rem;
+                line-height: 1.3rem;
+                
+                >*{
+                    overflow: hidden;
+                }
+    
+                .aboutme--highlights {
+                    margin-top: .5rem;
+                    
+                    p {
+                        font-size: 1.3rem;
+                        line-height: 1.8rem;
+                    }
+
+                    ul {
+                        // margin-top: .5rem;
+                        
+                        li {
+                            line-height: 1.5rem;
                             font-size: 1.3rem;
                         }
                     }
@@ -223,7 +272,7 @@
     }
 }
 
-@media screen and (max-width: 680px) {
+@media screen and (max-width: 390px) {
     .aboutme-container{
 
         .aboutme-card-container {

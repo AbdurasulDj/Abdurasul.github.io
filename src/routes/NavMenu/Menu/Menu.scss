@@ -52,6 +52,18 @@
                 }
               }
         }
+
+        .languages-container {
+          display: flex;
+          flex-direction: row;
+          gap: 1rem;
+          align-items: center;
+
+          span {
+            font-size: 1.8rem;
+            cursor: pointer;
+          }
+        }
     }
 
     &.active {

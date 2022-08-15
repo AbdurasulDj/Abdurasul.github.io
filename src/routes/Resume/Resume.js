@@ -1,41 +1,19 @@
 import React from 'react';
-import './Resume.scss'
-
 import Content from "./Content/Content"
 import Headers from "./Headers/Headers"
+import Data from "./resumeData.json"
 
+import './Resume.scss'
 
 
 export default function Resume() {
-  const [headers, setHeaders] = React.useState([
-    {
-      active: true,
-      href: "#resume-education",
-      icon: 'school',
-    },
-    {
-      active: false,
-      href: "#resume-history",
-      icon: 'briefcase',
-    },
-    {
-      active: false,
-      href: "#resume-skills",
-      icon: 'code-slash',
-    },
-    {
-      active: false,
-      href: "#resume-projects",
-      icon: 'bar-chart',
-    },
-    {
-      active: false,
-      href: "#resume-interests",
-      icon: 'game-controller',
-    }
-  ])
+  const [headers, setHeaders] = React.useState([])
 
   const [ skillsClicked, setSkillsClicked] = React.useState( false)
+
+  React.useEffect(()=> {
+    setHeaders(Data)
+  },[])
 
   function handleSkillsClicked(icon) {
     if (icon === 'code-slash') {
