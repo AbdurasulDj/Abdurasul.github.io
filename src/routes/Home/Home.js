@@ -1,11 +1,13 @@
 import React from 'react';
-import Typewriter from "typewriter-effect";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {  brands } from '@fortawesome/fontawesome-svg-core/import.macro'
 import { useTranslation } from 'react-i18next';
+import { Suspense } from 'react/cjs/react.production.min';
 
 import './Home.scss'
 import Photo from "./photo.jpg"
+
+const TypeWritter = React.lazy(()=> import('./TypeWritter'));
 
 export default function Home() {
   const { t } = useTranslation();
@@ -50,35 +52,9 @@ export default function Home() {
         <h1>{t('hello_im')} <span>{t('Abdurasul')}</span> </h1>
 
         <div className="typewritter">
-          <Typewriter
-
-          options={{
-              autoStart: true,
-              loop: true,
-            }}
-      
-          onInit={(typewriter)=> {
-      
-          typewriter
-
-          .typeString(t('frontend_developer'))
-            
-          .pauseFor(500)
-          .deleteAll()
-          .typeString(t('cross_platform_dev'))
-          
-          .pauseFor(500)
-          .deleteAll()
-          .typeString(t('javascript_react'))
-
-          .pauseFor(500)
-          .deleteAll()
-          .typeString(t('self_made_dev'))
-          .pauseFor(500)
-          
-          .start()
-          }}
-          />
+        <Suspense fallback={<div></div>}>
+          <TypeWritter/>
+        </Suspense>
         </div>
 
         <p>

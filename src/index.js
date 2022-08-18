@@ -1,12 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
-
+import Preloader from './routes/Preloader/Preloader'
 import "./i18n/i18n"
+import { Suspense } from 'react/cjs/react.development';
+
+// import App from './App'
+
+const App = React.lazy(() => import('./App'));
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Suspense fallback={<Preloader/>}>
+      <App/>
+    </Suspense>
   </React.StrictMode>,
   document.getElementById('root')
 );
