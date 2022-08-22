@@ -5,13 +5,18 @@ import { useTranslation } from 'react-i18next';
 import { Suspense } from 'react/cjs/react.production.min';
 
 import './Home.scss'
-import Photo from "./photo.jpg"
+import Photo from "./assets/photo.jpg"
 
-const TypeWritter = React.lazy(()=> import('./TypeWritter'));
+const TypeWritter = React.lazy(()=> import('./assets/TypeWritter'));
 
-export default function Home() {
+export default function Home({lang}) {
   const { t } = useTranslation();
-
+  const [language, setLanguage] = React.useState('.')
+  
+  React.useEffect(()=>{
+    setLanguage(lang)
+  }, [lang])
+  
   return (
     <div className='home-container' id='home'>
       <div className="profile-container">
@@ -52,9 +57,11 @@ export default function Home() {
         <h1>{t('hello_im')} <span>{t('Abdurasul')}</span> </h1>
 
         <div className="typewritter">
-        <Suspense fallback={<div></div>}>
-          <TypeWritter/>
-        </Suspense>
+          {lang === language ? <Suspense fallback={<div> </div>}>
+            <TypeWritter 
+              t={t}
+            />
+          </Suspense> : ''}
         </div>
 
         <p>

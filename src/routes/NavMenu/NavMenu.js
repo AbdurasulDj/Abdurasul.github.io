@@ -3,7 +3,7 @@ import './NavMenu.scss'
 import Topbar from './TopBar/Topbar';
 import Menu from './Menu/Menu';
 
-export default function Navbar() {
+export default function Navbar(props) {
   const [menuOpened, setMenuOpened] = useState(false)
 
   function clickHandler() {
@@ -16,6 +16,7 @@ export default function Navbar() {
         handleClick={clickHandler}
       />
       <Menu 
+        setLang={props.setLang}
         menuOpened={menuOpened}
         handleClick={clickHandler}
       />

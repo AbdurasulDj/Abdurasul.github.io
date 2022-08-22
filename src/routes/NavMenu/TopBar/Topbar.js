@@ -1,6 +1,6 @@
 import React from 'react';
 import './Topbar.scss'
-import Logo from './Logo.svg'
+import Logo from './assets/Logo.svg'
 
 export default function Topbar(props) {
   return (

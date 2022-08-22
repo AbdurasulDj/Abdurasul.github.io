@@ -23,8 +23,9 @@ i18n
     supportedLngs: ['en', 'ru', 'uz'],
     fallbackLng: 'en',
     detection: {
-        caches: ['cookie'],
-        order: ['querystring', 'cookie', 'localStorage', 'sessionStorage', 'navigator', 'path', 'subdomain', 'htmlTag'],
+        caches: ['cookie', 'localStorage'],
+        cookieMinutes: 10000,
+        order: [ 'cookie', 'localStorage', 'sessionStorage', 'navigator', 'path', 'subdomain','querystring', 'htmlTag'],
     }, 
     backend: {
         // lang : {

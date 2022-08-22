@@ -1,7 +1,7 @@
 import React from 'react';
 import Content from "./Content/Content"
 import Headers from "./Headers/Headers"
-import Data from "./resumeData.json"
+import Data from "./assets/resumeData.json"
 
 import './Resume.scss'
 

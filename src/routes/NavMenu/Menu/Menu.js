@@ -6,6 +6,11 @@ import './Menu.scss';
 
 export default function Menu(props) {
   const {t} = useTranslation()
+
+  function languageChanged(lang) {
+    i18next.changeLanguage(lang)
+    props.setLang(lang)
+  } 
   return (
     <div className={"menu-container " + (props.menuOpened && "active")}>
         <ul>
@@ -36,17 +41,17 @@ export default function Menu(props) {
           </li>
           <li className='languages-container'>
             <span
-              onClick={() => i18next.changeLanguage("uz")}
+              onClick={()=>languageChanged("uz")}
             >
               {t('uz')}
             </span>
             <span
-              onClick={() => i18next.changeLanguage("ru")}
+              onClick={()=>languageChanged("ru")}
             >
               {t('ru')}
             </span>
             <span
-              onClick={() => i18next.changeLanguage("en")}
+              onClick={()=>languageChanged("en")}
             >
               {t('en')}
             </span>

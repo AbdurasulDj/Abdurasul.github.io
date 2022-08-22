@@ -1,8 +1,8 @@
-import React, {useRef} from 'react';
-import emailjs from '@emailjs/browser';
+import React from 'react'
 import { useTranslation } from 'react-i18next';
 
 import './ContactMe.scss'
+import Form from './components/Form';
 
 // SHOW WARNING popup from right bottom corner
 
@@ -10,78 +10,11 @@ export default function ContactMe() {
   // i18n
   const { t} = useTranslation();
 
-  // state of form data
-  const [formData, setFormData] = React.useState({
-    user_name: '',
-    user_email: '',
-    message: ''
-  })
-  
   // state of data sent or not
   const [sent, setSent] = React.useState(false)
   
-  // state of form filled or not
-  const [buttonDisabled, setButtonDisabled] = React.useState(true)
-
-  // store form data in state
-  function handleChange(event) {
-    setFormData( prevData => {
-      return {
-        ...prevData,
-        [event.target.name] : event.target.value
-      }
-    })
-  }
-
-  // check form filled or not 
-  function checkFill() {
-    if (
-      formData.user_name.length >= 2 &&
-      formData.user_email.length >= 5 &&
-      formData.message.length >= 10
-    )  {
-      setButtonDisabled(false)
-    } else {
-      setButtonDisabled(true)
-    }
-  } 
-
-  //  trigger send button
-  React.useEffect( () => {
-    checkFill()
-  }, [formData])
-
-
-  // send form data
-  const form = useRef();
-
-  const sendEmail = (e) => {
-    e.preventDefault();
-
-    emailjs.sendForm('service_q1ticzm', 'template_twkixn9', form.current, 'x0jRGgktNpxClXGtk')
-      .then((result) => {
-          setSent(true)
-          const myTimer = setTimeout(() => {
-            setSent(false)
-            clearTimeout(myTimer)
-          }, 5000);
-      }, (error) => {
-          console.log(error.text);
-      });
-  };
-
-  // styles of send button
-  const displaedCheck = {
-    display: 'inline',
-    width: '100%',
-    transition: 'width 1s'
-  }
-
-  const hiddenCheck = {
-    display: 'none',
-    width: '0%'
-  }
-
+  
+  
   return (
     <div className="contactme-container" id='contactMe'>
       <div className='contactme-card-container'>
@@ -92,44 +25,10 @@ export default function ContactMe() {
             <span></span>
           </div>
         </div>
-        <form ref={form} onSubmit={buttonDisabled ? ()=>{return} : sendEmail()}>
-          <input 
-            type="text" 
-            name="from_name" 
-            onChange={handleChange}
-            placeholder={t('your_name')} 
-            value={formData.name}
-
-            />
-          <input 
-            type="email" 
-            name="user_email" 
-            onChange={handleChange}
-            placeholder={t('your_email')} 
-            value={formData.email} 
-
-            />
-          <textarea 
-            name="message" 
-            onChange={handleChange} 
-            placeholder={t('your_message')}
-            value={formData.message}
-
-            />
-          
-          {/* disable button depending on form filled or not */}
-            <button 
-              id='submit' 
-              disabled={buttonDisabled}
-              className={buttonDisabled ? 'disabledButton' : ''}
-            >
-              {t('send')}
-              <span style={sent ? displaedCheck : hiddenCheck}>
-                &nbsp;
-                <ion-icon name="checkmark-outline"></ion-icon>
-              </span>
-            </button>
-        </form>
+        <Form
+          sent={sent}
+          setSent={setSent}
+        />
       </div>
     </div>
     );
