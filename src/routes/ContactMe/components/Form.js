@@ -2,11 +2,10 @@ import React, {useRef} from 'react';
 import emailjs from '@emailjs/browser';
 import { useTranslation } from 'react-i18next';
 
-import Button from './Button';
 import '../ContactMe.scss'
 
 
-export default function Form({sent,setSent}) {
+export default function Form({sent, setSent, setError}) {
     // i18n
     const { t } = useTranslation();
     
@@ -23,13 +22,13 @@ export default function Form({sent,setSent}) {
     // check form filled or not 
     function checkFill() {
         if (
-        formData.from_name.length >= 2 &&
-        formData.user_email.length >= 5 &&
-        formData.message.length >= 10
+            formData.from_name.length >= 2 &&
+            formData.user_email.length >= 5 &&
+            formData.message.length >= 10
         )  {
-        setButtonDisabled(false)
+            setButtonDisabled(false)
         } else {
-        setButtonDisabled(true)
+            setButtonDisabled(true)
         }
     } 
 
@@ -52,6 +51,11 @@ export default function Form({sent,setSent}) {
             }, 5000);
         }, (error) => {
             console.log(error.text);
+            setError(true)
+            const myTimer = setTimeout(() => {
+                setError(false)
+                clearTimeout(myTimer)
+            }, 5000);
         });
     };
 
@@ -91,10 +95,13 @@ export default function Form({sent,setSent}) {
 
             />
 
-            <Button
-              buttonDisabled={buttonDisabled}
-              sent={sent}
-            />
+            <button 
+                id='submit' 
+                disabled={buttonDisabled}
+                className={buttonDisabled ? 'disabledButton' : ''}
+            >
+                {t('send')}    
+            </button>
         </form>
     )
 };

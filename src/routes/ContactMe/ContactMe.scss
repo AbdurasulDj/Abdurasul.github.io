@@ -149,6 +149,43 @@
             }
         }
     }
+
+    .modal-container {
+        width: 30rem;
+        height: 7rem;
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        margin-bottom: -7rem;
+        margin-right: 2.5rem;
+        border-radius: 1rem;
+        background-color: $mainBoxBackground;
+        box-shadow: 1px 5px 10px rgba(0, 0, 0, 0.5);
+        border: $mainBorder;
+        backdrop-filter: blur(20px);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: 'Merriweather', serif;
+        font-weight: 700;
+        font-size: 1.8rem;
+        text-transform: uppercase;
+        transition: 1s;
+        
+        .error-color{
+            color:rgb(255, 255, 255);
+            text-shadow: 0 0 2px red;
+        }
+        
+        .success-color {
+            color: rgb(255, 255, 255);
+            text-shadow: 0 0 2px rgb(255, 238, 0);
+        }
+    }
+
+    .modal-shown{
+        margin-bottom: 2.5rem;
+    }
 }
 
 @media screen and (max-width: 540px) {

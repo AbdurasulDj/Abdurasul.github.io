@@ -55,5 +55,8 @@
     "puremilky_paragraph": "Лендинг , сделано  с спользованием HTML,CSS и JavaScript.",
     "first_site_paragraph": "Первая версия моего сайта, сделано с спользованием using HTML,CSS, Sass и JavaScript.",
 
-    "communication" : "Слаженность в команде"
+    "communication" : "Слаженность в команде",
+
+    "sent_text" : "отправлено",
+    "error_text" : "ошибка"
 }

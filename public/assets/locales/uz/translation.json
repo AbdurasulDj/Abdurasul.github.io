@@ -55,5 +55,8 @@
     "puremilky_paragraph": "Sayt lendingi, HTML,CSS va JavaScript yordamida yaratilgan.",
     "first_site_paragraph": "Portfoliyo saytimning birinchi versiyasi, HTML,CSS, Sass va JavaScript yordamida yaratilgan.",
 
-    "communication" : "Muomila"
+    "communication" : "Muomila",
+
+    "sent_text" : "jo'natildi",
+    "error_text" : "xatolik"
 }

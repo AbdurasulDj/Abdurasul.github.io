@@ -55,5 +55,8 @@
     "puremilky_paragraph": "Landing page , made using HTML,CSS and JavaScript.",
     "first_site_paragraph": "First version of my portfolio site, made using HTML,CSS, Sass and JavaScript.",
 
-    "communication" : "Communication"
+    "communication" : "Communication",
+
+    "sent_text" : "success",
+    "error_text" : "error"
 }
