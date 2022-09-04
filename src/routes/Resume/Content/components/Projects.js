@@ -1,61 +1,34 @@
-import { useTranslation } from 'react-i18next';
+import { useTranslation } from "react-i18next";
 
-import './Projects.scss'
+import "./Projects.scss";
 
 export default function Projects() {
-    const {t} = useTranslation()
-    
-    return(
-        <>
-            <div className="projects-container">
-                <div className="dot-container">
-                    <div className="dot"></div>
-                </div>              
-                <div className="project-info" >
+  const { t } = useTranslation();
 
-                    <div className="project-info_description">
-                        {t('gesys_paragraph')}
-                    </div>
-                </div>              
-                <div className="project-url">
-                    <a href="http://www.gesys.uz" target="_blank" rel="noopener noreferrer">
-                        Gesys.uz
-                    </a>
-                </div>
-            </div>
-
-            <div className="projects-container">
-                <div className="dot-container">
-                    <div className="dot"></div>
-                </div>              
-                <div className="project-info" >
-                    <div className="project-info_description">
-                        {t('puremilky_paragraph')}
-                    </div>
-                </div>              
-                <div className="project-url">
-                    <a href="http://www.puremilky.uz" target="_blank" rel="noopener noreferrer">
-                        PureMilky.uz
-                    </a>
-                </div>
-            </div>
-
-            <div className="projects-container">
-                <div className="dot-container">
-                    <div className="dot"></div>
-                </div>              
-                <div className="project-info" >
-                    <div className="project-info_description">
-                        {t('first_site_paragraph')}
-                    </div>
-                </div>              
-                <div className="project-url">
-                    <a href="http://www.Abdurasul.dev/version1" target="_blank" rel="noopener noreferrer">
-                        Abdurasul.dev
-                    </a>
-                </div>
-            </div>
-
-        </>
-    )
-};
+  return (
+    <>
+      <ul className="projects-container">
+        <li>
+          <a href="/online_shop" target="_blank">Online Shop</a>
+          <span> - ReactJs, TypeScript, Bootstrap 5, AxiosJs</span>
+        </li>
+        <li>
+          <a href="/top_obmennik" target="_blank">Top obmennik</a>
+          <span> - HTML, CSS, JS, Sass</span>
+        </li>
+        <li>
+          <a href="/abdurasul_dev" target="_blank">Abdurasul.dev(v.1)</a>
+          <span> - HTML, Sass, JS</span>
+        </li>
+        <li>
+          <a href="https://puremilky.uz/" target="_blank">PureMilky.uz</a>
+          <span> - HTML, CSS, JS</span>
+        </li>
+        <li>
+          <a href="https://gesys.uz/" target="_blank">Gesys.uz</a>
+          <span> - HTML, CSS, Bootstrap 4</span>
+        </li>
+      </ul>
+    </>
+  );
+}
