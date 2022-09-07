@@ -29,7 +29,7 @@ export default function Skills(props) {
             value: 50
         },
         {
-            name: t('communication'),
+            name: 'Communication',
             value: 80
         },
     ])

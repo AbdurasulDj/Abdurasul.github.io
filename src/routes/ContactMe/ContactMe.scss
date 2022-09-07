@@ -1,202 +1,297 @@
 @import '../../_variables';
 
 .contactme-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .contactme-card-container {
+    height: 80vh;
+    width: 80vw;
+    background-color: $mainBoxBackground;
+    box-shadow: $mainBoxShadow;
+    border-left: $mainBorder;
+    border-top: $mainBorder;
+    backdrop-filter: blur(5px);
+    border-radius: 1rem;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
 
-    .contactme-card-container {
-        height: 80vh;
-        width: 80vw;
-        background-color: $mainBoxBackground;
-        box-shadow: $mainBoxShadow;
-        border-left: $mainBorder;
-        border-top: $mainBorder;
-        backdrop-filter: blur(5px);
-        border-radius: 1rem;
+    h1 {
+      font-size: 3.5rem;
+    }
+
+    div {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      .shyning {
+        position: relative;
         display: flex;
         flex-direction: column;
-        justify-content: space-evenly;
-        align-items: center;
-
-        div {
-            display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-        
-            .shyning {
-                position: relative;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                width: 85%;
-                height: 1rem;
-                margin-top: 5%;
-                
-                span:first-child {
-                    width: 100%;
-                    height: .2rem;
-                    border-radius: 10%;
-                    background-color: rgb(0, 255, 255); 
-                }
-                
-                span:last-child {
-                    width: 40%;
-                    height: .2rem;
-                    border-radius: 10%;
-                    background-color: rgb(0, 255, 255);
-                    position: absolute;
-                    z-index: -1;
-                    box-shadow: 0 0 .5rem .1rem rgb(0, 255, 0);
-                    animation: shyning 2s ease infinite;
-                }
-
-                @keyframes shyning {
-                    0% { width: 40%; }
-                    25% { width: 45%; box-shadow: 0 0 .5rem .1rem rgb(0, 255, 255);}
-                    50% { width: 45%; box-shadow: 0 0 .5rem .1rem rgb(0, 255, 255);}
-                    75% { width: 45%; box-shadow: 0 0 .5rem .1rem rgb(0, 255, 255);}
-                    100% { width: 40%; }
-                }
-            }
-        }
-
-        form {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-evenly;
-            align-items: center;
-            width: 100%;
-            height: 60%;
-            gap: 10%;
-
-            input, textarea {
-                font-family: 'Merriweather', serif;
-
-                width: 80%;
-                padding: 1rem;
-                background: transparent;
-                color: white;
-                outline: none;
-                border: none;
-                border-bottom: $mainBorder;
-                // border-right: $mainBorder;
-                // border-top: 1px solid rgba(0, 0, 0, .5);
-                // border-left: 1px solid rgba(0, 0, 0, .5);
-                transition: .8s ease ;
-            }
-
-            input {
-                height: 10%;
-                padding-left: 1.5rem;
-            }
-
-            textarea {
-                height: 40%;
-                resize: none;
-                padding-left: 1.5rem;
-
-            }
-
-            #submit {
-                font-family: 'Merriweather', serif;
-                background: transparent;
-                color: white;
-                height: 10%;
-                width: 10%;
-                // border-radius: 1rem;
-                transition: 1s;
-                border: $mainBorder;
-                border-radius: .5rem;
-                z-index: 100;
-                cursor: pointer;
-
-                ion-icon{
-                    color:rgb(0, 255, 0);
-                }
-            }
-
-            #submit:active {
-                color: black;
-            }
-
-            #submit.disabledButton:active {
-                color: white;
-            }
-
-            #submit.disabledButton{
-                cursor: not-allowed;
-            }
-
-            input:focus, textarea:focus {
-                outline: none;
-                background: rgba(255, 255, 255, .05);
-                border-radius: 1rem;
-                // backdrop-filter: blur(5px);
-            }
-
-            input::placeholder, textarea::placeholder {
-                color: white;
-                // padding: 1rem;
-            }
-
-            input::-ms-input-placeholder, textarea::-ms-input-placeholder {
-                color: white;
-                // padding: 1rem;
-            }
-        }
-    }
-
-    .modal-container {
-        width: 30rem;
-        height: 7rem;
-        position: fixed;
-        right: 0;
-        bottom: 0;
-        margin-bottom: -7rem;
-        margin-right: 2.5rem;
-        border-radius: 1rem;
-        background-color: $mainBoxBackground;
-        box-shadow: 1px 5px 10px rgba(0, 0, 0, 0.5);
-        border: $mainBorder;
-        backdrop-filter: blur(20px);
-        display: flex;
         justify-content: center;
         align-items: center;
-        font-family: 'Merriweather', serif;
-        font-weight: 700;
-        font-size: 1.8rem;
-        text-transform: uppercase;
-        transition: 1s;
-        
-        .error-color{
-            color:rgb(255, 255, 255);
-            text-shadow: 0 0 2px red;
+        width: 85%;
+        height: 1rem;
+        margin-top: 5%;
+
+        span:first-child {
+          width: 100%;
+          height: .2rem;
+          border-radius: 10%;
+          background-color: rgb(0, 255, 255);
         }
-        
-        .success-color {
-            color: rgb(255, 255, 255);
-            text-shadow: 0 0 2px rgb(255, 238, 0);
+
+        span:last-child {
+          width: 40%;
+          height: .2rem;
+          border-radius: 10%;
+          background-color: rgb(0, 255, 255);
+          position: absolute;
+          z-index: -1;
+          box-shadow: 0 0 .5rem .1rem rgb(0, 255, 0);
+          animation: shyning 2s ease infinite;
         }
+
+        @keyframes shyning {
+          0% {
+            width: 40%;
+          }
+
+          25% {
+            width: 45%;
+            box-shadow: 0 0 .5rem .1rem rgb(0, 255, 255);
+          }
+
+          50% {
+            width: 45%;
+            box-shadow: 0 0 .5rem .1rem rgb(0, 255, 255);
+          }
+
+          75% {
+            width: 45%;
+            box-shadow: 0 0 .5rem .1rem rgb(0, 255, 255);
+          }
+
+          100% {
+            width: 40%;
+          }
+        }
+      }
     }
 
-    .modal-shown{
-        margin-bottom: 2.5rem;
+    form {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: center;
+      width: 100%;
+      height: 60%;
+      gap: 10%;
+
+      input,
+      textarea {
+        font-family: 'Merriweather', serif;
+
+        width: 80%;
+        padding: 1rem;
+        background: transparent;
+        color: white;
+        outline: none;
+        border: none;
+        border-bottom: $mainBorder;
+        transition: .8s ease;
+      }
+
+      input {
+        height: 10%;
+        padding-left: 1.5rem;
+      }
+
+      textarea {
+        height: 40%;
+        resize: none;
+        padding-left: 1.5rem;
+
+      }
+
+      #submit {
+        font-family: 'Merriweather', serif;
+        background: transparent;
+        color: rgb(255, 255, 255);
+        height: 10%;
+        width: max(10%, 10rem);
+        // border-radius: 1rem;
+        transition: 1s;
+        border: $mainBorder;
+        border-radius: .5rem;
+        z-index: 100;
+        cursor: pointer;
+
+        ion-icon {
+          color: rgb(0, 255, 0);
+        }
+      }
+
+      #submit:active {
+        color: black;
+      }
+
+      #submit.disabledButton:active {
+        color: rgba(255, 255, 255, 0.719);
+      }
+
+      #submit.disabledButton {
+        cursor: not-allowed;
+      }
+
+      input:focus,
+      textarea:focus {
+        outline: none;
+        background: rgba(255, 255, 255, .05);
+        border-radius: 1rem;
+        // backdrop-filter: blur(5px);
+      }
+
+      input::placeholder,
+      textarea::placeholder {
+        color: rgba(255, 255, 255, 0.582);
+        font-size: 1.4rem;
+      }
     }
+  }
+
+  .modal-container {
+    width: 30rem;
+    height: 7rem;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    margin-bottom: -7rem; // equal to hight
+    margin-right: 2.5rem;
+    border-radius: 1rem;
+    background-color: $mainBoxBackground;
+    box-shadow: 1px 5px 10px rgba(0, 0, 0, 0.5);
+    border: $mainBorder;
+    backdrop-filter: blur(20px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Merriweather', serif;
+    font-weight: 700;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    transition: 1s;
+
+    .error-color {
+      color: rgb(255, 255, 255);
+      text-shadow: 0 0 2px red;
+    }
+
+    .success-color {
+      color: rgb(255, 255, 255);
+      text-shadow: 0 0 2px rgb(255, 238, 0);
+    }
+  }
+
+  .modal-shown {
+    margin-bottom: 2.5rem;
+  }
 }
 
-@media screen and (max-width: 540px) {
-    .contactme-container {
-        .contactme-card-container {
-            form {
-                #submit {
-                    height: 10%;
-                    width: 20%;
-                }
-            }
-        }
+@media only screen and (max-width: 720px) {
+  .contactme-container {
+
+    .contactme-card-container {
+      height: 80vh;
+      width: 80vw;
+
+      h1 {
+        font-size: 2.5rem;
+      }
+
     }
+    .modal-container {
+      width: 20rem;
+      height: 5rem;
+      position: fixed;
+      right: 0;
+      bottom: 0;
+      margin-bottom: -5rem; // equal to hight
+      margin-right: 2.5rem;
+      border-radius: 1rem;
+      background-color: $mainBoxBackground;
+      box-shadow: 1px 5px 10px rgba(0, 0, 0, 0.5);
+      border: $mainBorder;
+      backdrop-filter: blur(20px);
+      font-weight: 700;
+      font-size: 1.6rem;
+      text-transform: uppercase;
+  
+      .error-color {
+        color: rgb(255, 255, 255);
+        text-shadow: 0 0 2px red;
+      }
+  
+      .success-color {
+        color: rgb(255, 255, 255);
+        text-shadow: 0 0 2px rgb(255, 238, 0);
+      }
+    }
+  
+    .modal-shown {
+      margin-bottom: 2.5rem;
+    }
+  }
+}
+
+@media only screen and (max-width: 420px) {
+  .contactme-container {
+
+    .contactme-card-container {
+      height: 80vh;
+      width: 80vw;
+
+      h1 {
+        font-size: 2.5rem;
+      }
+
+    }
+    .modal-container {
+      width: 15rem;
+      height: 4rem;
+      position: fixed;
+      right: 0;
+      bottom: 0;
+      margin-right: calc((100vw - 30rem) / 2);
+      margin-bottom: -4rem; // equal to hight
+      border-radius: 1rem;
+      background-color: $mainBoxBackground;
+      box-shadow: 1px 5px 10px rgba(0, 0, 0, 0.5);
+      border: $mainBorder;
+      backdrop-filter: blur(20px);
+      font-weight: 700;
+      font-size: 1.4rem;
+      text-transform: uppercase;
+  
+      .error-color {
+        color: rgb(255, 255, 255);
+        text-shadow: 0 0 2px red;
+      }
+  
+      .success-color {
+        color: rgb(255, 255, 255);
+        text-shadow: 0 0 2px rgb(255, 238, 0);
+      }
+    }
+  
+    .modal-shown {
+      margin-bottom: 2.5rem;
+    }
+  }
 }

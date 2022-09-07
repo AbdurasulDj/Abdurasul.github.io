@@ -1,124 +1,128 @@
-.education-container{
-    display: grid;
-    width: 55vw;
-    // height: 100%;
-    grid-template-columns: 1vw auto 10vw;
-    gap: 2rem;
+.education-container {
+  display: grid;
+  width: 55vw;
+  // height: 100%;
+  grid-template-columns: 1vw auto 10vw;
+  gap: 2rem;
 
-    .dot-container{
-        display: flex;
-        width: 100%;
-        height: 100%;
-        justify-content: center;
-        align-items: center;
+  .dot-container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
 
-        .dot{
-            width: 1rem;
-            height: 1rem;
-            border-radius: 1rem;
-            background-color: white;
-            
-        }
+    .dot {
+      width: 1rem;
+      height: 1rem;
+      border-radius: 1rem;
+      background-color: white;
+
     }
-    
-    .education-info{
-        &_name {
-            font-family: 'Merriweather', serif;
+  }
 
-        }
+  .education-info {
+    &_name {
+      font-family: 'Merriweather', serif;
 
-        &_degree {
-            margin-top: 1rem;
-            
-        }
     }
 
-    .education-years{
-        font-family: 'Merriweather', serif;
-        
+    &_degree {
+      margin-top: 1rem;
+
     }
+  }
+
+  .education-years {
+    font-family: 'Merriweather', serif;
+
+  }
 }
 
 @media screen and (max-width: 1000px) {
-    .education-info{
-        &_name {
-            font-size: 1.4rem;
+  .education-info {
+    &_name {
+      font-size: 1.4rem;
 
-        }
-
-        &_degree {
-            margin-top: .5rem;
-            font-size: 1.5rem;
-        }
     }
 
-    .education-years{
-        font-size: 1.5rem;        
+    &_degree {
+      margin-top: .5rem;
+      font-size: 1.5rem;
     }
+  }
+
+  .education-years {
+    font-size: 1.5rem;
+  }
 }
 
 @media screen and (max-width: 800px) {
-    .education-info{
-        &_name {
-            font-size: 1.3rem;
+  .education-info {
+    &_name {
+      font-size: 1.3rem;
 
-        }
-
-        &_degree {
-            margin-top: .5rem;
-            font-size: 1.4rem;
-        }
     }
 
-    .education-years{
-        font-size: 1.3rem;        
+    &_degree {
+      margin-top: .5rem;
+      font-size: 1.4rem;
     }
+  }
+
+  .education-years {
+    font-size: 1.3rem;
+  }
 }
 
 @media screen and (max-width: 680px) {
-    .education-container{
-        .dot-container{
+  .education-container {
+    .dot-container {
 
-            .dot{
-                width: .5rem;
-                height: .5rem;
-                border-radius: .5rem;
-                
-            }
-        }
-
-        .education-info{
-            &_name {
-                font-size: 1.1rem;
-
-            }
-
-            &_degree {
-                margin-top: .25rem;
-                font-size: 1.2rem;
-            }
-        }
-
-        .education-years{
-            font-size: 1.1rem;        
-        }
+      .dot {
+        width: .5rem;
+        height: .5rem;
+        border-radius: .5rem;
+      }
     }
+
+    .education-info {
+      &_name {
+        font-size: 1.2rem;
+
+      }
+
+      &_degree {
+        margin-top: .25rem;
+        font-size: 1.2rem;
+      }
+    }
+
+    .education-years {
+      font-size: 1.2rem;
+    }
+  }
 }
 
 @media screen and (max-width: 420px) {
-    .education-info{
-        &_name {
-            font-size: 1rem;
+  .education-container {
+    gap: 1rem;
+    grid-template-columns: 1vw auto 14vw;
 
-        }
+    // .education-info {
+    //   &_name {
+    //     font-size: 1.1rem;
 
-        &_degree {
-            // margin-top: .25rem;
-            font-size: 1rem;
-        }
-    }
+    //   }
 
-    .education-years{
-        font-size: 1rem;        
-    }
+    //   &_degree {
+    //     // margin-top: .25rem;
+    //     font-size: 1.1rem;
+    //   }
+    // }
+
+    // .education-years {
+    //   font-size: 1.1rem;
+    // }
+  }
 }

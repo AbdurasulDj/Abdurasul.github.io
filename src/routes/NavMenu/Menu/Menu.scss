@@ -2,8 +2,8 @@
 
 .menu-container{
     height: 90vh;
-    top: 10vh;
     width: 0;
+    top: 10vh;
     right: 0;
     position: fixed;
     z-index: 2;
@@ -75,4 +75,94 @@
             opacity: 1;
         }
     }
+}
+
+@media only screen and ( max-width: 800px) {
+  .menu-container{
+    height: 90vh;
+    top: 10vh;
+    
+    ul{
+        height: 75%;
+        font-size: 2.3rem;
+        font-weight: 400;
+        
+        li{
+          
+            a {
+                letter-spacing: .3rem;
+                word-spacing: .5rem;
+
+            }
+        }
+
+        .languages-container {
+          gap: 1rem;
+
+          span {
+            font-size: 1.8rem;
+          }
+        }
+    }
+}
+}
+
+@media only screen and ( max-width: 620px) {
+  .menu-container{
+    height: 90vh;
+    top: 10vh;
+    
+    ul{
+        height: 75%;
+        font-size: 2.1rem;
+        font-weight: 400;
+        
+        li{
+          
+            a {
+                letter-spacing: .3rem;
+                word-spacing: .5rem;
+
+            }
+        }
+
+        .languages-container {
+          gap: 1rem;
+
+          span {
+            font-size: 1.6rem;
+          }
+        }
+    }
+}
+}
+
+@media only screen and ( max-width: 420px) {
+  .menu-container{
+    height: 90vh;
+    top: 10vh;
+    
+    ul{
+        height: 75%;
+        font-size: 1.8rem;
+        font-weight: 400;
+        
+        li{
+          
+            a {
+                letter-spacing: .3rem;
+                word-spacing: .5rem;
+
+            }
+        }
+
+        .languages-container {
+          gap: 1rem;
+
+          span {
+            font-size: 1.4rem;
+          }
+        }
+    }
+}
 }

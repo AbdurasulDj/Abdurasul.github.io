@@ -16,6 +16,10 @@
         display: flex;
         justify-content: center;
         align-items: center;
+
+        h1 {
+          font-size: 3.5rem;
+        }
     }
 
     .resume-content {
@@ -23,9 +27,32 @@
         width: 60vw;
         overflow: hidden; 
         display: flex;
-        justify-content: space-evenly;
+        justify-content: center;
         align-items: center;
         flex-direction: column;
-        
+        gap: 3rem;
     }
+}
+
+@media only screen and (max-width: 720px) {
+  .resume-content-container {
+    height: 60vh;
+    width: 60vw;
+    margin-top: 6.5vh;
+
+    .headers{
+        height: 7vh;
+        width: 60vw;
+
+        h1 {
+          font-size: 2.5rem;
+        }
+    }
+
+    .resume-content {
+        height: 60vh;
+        width: 60vw;  
+        // gap: 2rem;      
+    }
+}
 }

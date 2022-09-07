@@ -38,7 +38,7 @@
     "projects": "Projects",
     "interests": "Interests",
 
-    "tashkent_tec_university": "TASHKENT STATE TECHNICAL UNIVERSITY NAMED AFTER ISLAM KARIMOV",
+    "tashkent_tec_university": "Tashkent State Technical University Named After Islam Karimov",
     "bachelor_degree": "Bachelor degree",
     "present": "Present",
     "tuit_liceum": "Muhammad al-Khwarizmi TUIT Academic Lyceum",
@@ -57,6 +57,6 @@
 
     "communication" : "Communication",
 
-    "sent_text" : "success",
+    "sent_text" : "sent",
     "error_text" : "error"
 }

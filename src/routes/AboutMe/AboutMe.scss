@@ -17,7 +17,7 @@
         border-radius: 1rem;
         display: flex;
         flex-direction: column;
-        justify-content: space-evenly;
+        justify-content: center;
         align-items: center;
         
         .aboutme--header{
@@ -26,6 +26,7 @@
             justify-content: space-evenly;
             align-items: center;
             height: 20%;
+            margin-bottom: 2rem;
 
             h2 {
                 font-size: 2em;
@@ -78,27 +79,28 @@
             flex-direction: column;
             justify-content: space-evenly;
             align-items: flex-start;
-            height: 55%;
+            height: 60%;
             width: 90%;
             font-weight: 500;
-            letter-spacing: 0.1rem;
-            line-height: 2rem;
             
             >*{
                 overflow: hidden;
             }
 
-            // div:nth-child(1){
-            //     font-family: 'Merriweather', serif;
+            div:nth-child(1){
+                font-size: 1.7rem;
+                line-height: 2.5rem;
 
-            // }
+            }
 
             .aboutme--highlights {
                 margin-top: 2rem;
-                font-family: 'Merriweather', serif;
-
+                
                 p {
+                    font-family: 'Merriweather', serif;
                     overflow: hidden;
+                    border-bottom: 1px solid rgba(255, 230, 0, .9);
+                    width: 10rem;
                 }
 
                 ul {
@@ -138,7 +140,7 @@
         
             .aboutme--header{
                 h2 {
-                    font-size: 2em;
+                    font-size: 1.8em;
                 }
 
                 h4{ 
@@ -147,20 +149,22 @@
             }
     
             .aboutme--content {
-                font-size: 1.5rem;
-                font-weight: 500;
-                letter-spacing: 0.1rem;
-                line-height: 2rem;
                 
                 >*{
                     overflow: hidden;
                 }
+
+                div:nth-child(1){
+                  font-size: 1.5rem;
+                  line-height: 2.2rem;
+  
+              }
     
                 .aboutme--highlights {
                     margin-top: 2rem;
                     
                     p {
-                        font-size: 1.4rem;
+                        font-size: 1.5rem;
                     }
 
                     ul {
@@ -177,143 +181,200 @@
     }
 }
 
-@media screen and (max-width: 680px) {
-    .aboutme-container{
+@media screen and (max-width: 587px) {
+  .aboutme-container{
 
-        .aboutme-card-container {
-        
-            .aboutme--header{
-                h2 {
-                    font-size: 2em;
-                }
+      .aboutme-card-container {
+      
+          .aboutme--header{
+              h2 {
+                  font-size: 1.8em;
+              }
 
-                h4{ 
-                    font-size: 1.5rem;
-                }
+              h4{ 
+                  font-size: 1.4rem;
+              }
+          }
+  
+          .aboutme--content {
+              
+              >*{
+                  overflow: hidden;
+              }
+
+              div:nth-child(1){
+                font-size: 1.4rem;
+                line-height: 2rem;
+
             }
-    
-            .aboutme--content {
-                font-size: 1.6rem;
-                font-weight: 500;
-                letter-spacing: 0.1rem;
-                line-height: 1.6rem;
-                margin-top: -4rem;
-                
-                >*{
-                    overflow: hidden;
-                }
-    
-                .aboutme--highlights {
-                    margin-top: .5rem;
-                    
-                    p {
-                        font-size: 1.5rem;
-                        line-height: 1.8rem;
-                    }
+  
+              .aboutme--highlights {
+                  margin-top: 1rem;
+                  
+                  p {
+                      font-size: 1.4rem;
+                      width: 8.7rem;
+                  }
 
-                    ul {
-                        margin-top: .5rem;
-                        
-                        li {
-                            line-height: 1.8rem;
-                            font-size: 1.4rem;
-                        }
-                    }
-                }
-            }
-        }
-    }
+                  ul {
+                      margin-top: 1rem;
+                      
+                      li {
+                          line-height: 2.3rem;
+                          font-size: 1.4rem;
+                      }
+                  }
+              }
+          }
+      }
+  }
 }
 
-@media screen and (max-width: 493px) {
-    .aboutme-container{
+@media screen and (max-width: 519px) {
+  .aboutme-container{
 
-        .aboutme-card-container {
-        
-            .aboutme--header{
-                h2 {
-                    font-size: 1.5em;
-                }
+      .aboutme-card-container {
+      
+          .aboutme--header{
+            margin-bottom: 0rem;
 
-                h4{ 
-                    font-size: 1rem;
-                }
-            }
-    
-            .aboutme--content {
+              h2 {
+                  font-size: 1.7em;
+              }
+
+              h4{ 
+                  font-size: 1.4rem;
+              }
+          }
+  
+          .aboutme--content {
+              
+              >*{
+                  overflow: hidden;
+              }
+
+              div:nth-child(1){
                 font-size: 1.3rem;
-                font-weight: 500;
-                letter-spacing: 0.1rem;
-                line-height: 1.3rem;
-                
-                >*{
-                    overflow: hidden;
-                }
-    
-                .aboutme--highlights {
-                    margin-top: .5rem;
-                    
-                    p {
-                        font-size: 1.3rem;
-                        line-height: 1.8rem;
-                    }
+                line-height: 2rem;
 
-                    ul {
-                        // margin-top: .5rem;
-                        
-                        li {
-                            line-height: 1.5rem;
-                            font-size: 1.3rem;
-                        }
-                    }
-                }
             }
-        }
-    }
+  
+              .aboutme--highlights {
+                  margin-top: 1rem;
+                  
+                  p {
+                      font-size: 1.3rem;
+                      width: 8.7rem;
+                  }
+
+                  ul {
+                      margin-top: 1rem;
+                      
+                      li {
+                          line-height: 2rem;
+                          font-size: 1.3rem;
+                      }
+                  }
+              }
+          }
+      }
+  }
 }
 
-@media screen and (max-width: 390px) {
-    .aboutme-container{
+@media screen and (max-width: 419px) {
+  .aboutme-container{
 
-        .aboutme-card-container {
-        
-            .aboutme--header{
-                h2 {
-                    font-size: 1.5em;
-                }
+      .aboutme-card-container {
+      
+          .aboutme--header{
+              h2 {
+                  font-size: 1.6em;
+              }
 
-                h4{ 
-                    font-size: 1rem;
-                }
+              h4{ 
+                  font-size: 1.3rem;
+              }
+          }
+  
+          .aboutme--content {
+              
+              >*{
+                  overflow: hidden;
+              }
+
+              div:nth-child(1){
+                font-size: 1.2rem;
+                line-height: 2rem;
+
             }
-    
-            .aboutme--content {
-                font-size: 1.1rem;
-                font-weight: 500;
-                letter-spacing: 0.1rem;
-                line-height: 1.3rem;
-                
-                >*{
-                    overflow: hidden;
-                }
-    
-                .aboutme--highlights {
-                    margin-top: .5rem;
-                    
-                    p {
-                        font-size: 1.1rem;
-                    }
+  
+              .aboutme--highlights {
+                  margin-top: 1rem;
+                  
+                  p {
+                      font-size: 1.2rem;
+                      width: 7.5rem;
+                  }
 
-                    ul {
-                        // margin-top: .5rem;
-                        
-                        li {
-                            line-height: 1.5rem;
-                            font-size: 1rem;
-                        }
-                    }
-                }
+                  ul {
+                      margin-top: 1rem;
+                      
+                      li {
+                          line-height: 2rem;
+                          font-size: 1.2rem;
+                      }
+                  }
+              }
+          }
+      }
+  }
+}
+
+@media screen and (max-width: 387px) {
+  .aboutme-container{
+
+      .aboutme-card-container {
+      
+          .aboutme--header{
+              h2 {
+                  font-size: 1.6em;
+              }
+
+              h4{ 
+                  font-size: 1.3rem;
+              }
+          }
+  
+          .aboutme--content {
+              
+              >*{
+                  overflow: hidden;
+              }
+
+              div:nth-child(1){
+                font-size: 1.2rem;
+                line-height: 1.6rem;
+
             }
-        }
-    }
+  
+              .aboutme--highlights {
+                  margin-top: 0rem;
+                  
+                  p {
+                      font-size: 1.2rem;
+                      width: 7.5rem;
+                  }
+
+                  ul {
+                      margin-top: .5rem;
+                      
+                      li {
+                          line-height: 1.6rem;
+                          font-size: 1.2rem;
+                      }
+                  }
+              }
+          }
+      }
+  }
 }

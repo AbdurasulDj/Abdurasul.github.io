@@ -8,7 +8,7 @@ export default function Interests() {
     const {t} = useTranslation()
     
     return(
-        <>
+        <div>
             <div className="interests-container">
                 <div className="dot-container">
                     <div className="dot"></div>
@@ -54,6 +54,6 @@ export default function Interests() {
 
             </div>
 
-        </>
+        </div>
     )
 };
