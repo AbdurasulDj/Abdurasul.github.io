@@ -1,11 +1,9 @@
 import React from 'react'
-import { useTranslation } from 'react-i18next';
 import ProgressBar from './assets/ProgressBar'
 
 import './Skills.scss'
 
 export default function Skills(props) {
-    const {t} = useTranslation()
 
     const [ skillsState, setSkillsState] = React.useState([
         {
