@@ -1,380 +1,399 @@
 @import '../../_variables';
 
-.aboutme-container{
+.aboutme-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .aboutme-card-container {
+    height: 80vh;
+    width: 80vw;
+    background-color: $mainBoxBackground;
+    box-shadow: $mainBoxShadow;
+    border-left: $mainBorder;
+    border-top: $mainBorder;
+    backdrop-filter: blur(5px);
+    border-radius: 1rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 
-    .aboutme-card-container {
-        height: 80vh;
-        width: 80vw;
-        background-color: $mainBoxBackground;
-        box-shadow: $mainBoxShadow;
-        border-left: $mainBorder;
-        border-top: $mainBorder;
-        backdrop-filter: blur(5px);
-        border-radius: 1rem;
+    .aboutme__header {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: center;
+      height: 20%;
+      margin-bottom: 2rem;
+
+      h2 {
+        font-size: 2em;
+        font-weight: 700;
+      }
+
+      h4 {
+        font-weight: 300;
+        font-family: 'Merriweather', serif;
+      }
+
+      div {
+        position: relative;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        
-        .aboutme--header{
-            display: flex;
-            flex-direction: column;
-            justify-content: space-evenly;
-            align-items: center;
-            height: 20%;
-            margin-bottom: 2rem;
+        width: 100%;
+        height: 1rem;
 
-            h2 {
-                font-size: 2em;
-                font-weight: 700;
-            }
-            h4{ 
-                font-weight: 300;
-                font-family: 'Merriweather', serif;
-            }
-
-            div {
-                position: relative;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                width: 100%;
-                height: 1rem;
-                
-                span:first-child {
-                    width: 100%;
-                    height: .2rem;
-                    border-radius: 10%;
-                    background-color: rgb(0, 255, 255); 
-                }
-                
-                span:last-child {
-                    width: 40%;
-                    height: .2rem;
-                    border-radius: 10%;
-                    background-color: rgb(0, 255, 255);
-                    position: absolute;
-                    z-index: -1;
-                    box-shadow: 0 0 .5rem .1rem rgb(0, 255, 0);
-                    animation: shyning 2s ease infinite;
-                }
-
-                @keyframes shyning {
-                    0% { width: 40%; }
-                    25% { width: 45%; box-shadow: 0 0 .5rem .1rem rgb(0, 255, 255);}
-                    50% { width: 45%; box-shadow: 0 0 .5rem .1rem rgb(0, 255, 255);}
-                    75% { width: 45%; box-shadow: 0 0 .5rem .1rem rgb(0, 255, 255);}
-                    100% { width: 40%; }
-                }
-            }
+        span:first-child {
+          width: 100%;
+          height: .2rem;
+          border-radius: 10%;
+          background-color: rgb(0, 255, 255);
         }
 
-        .aboutme--content {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-evenly;
-            align-items: flex-start;
-            height: 60%;
-            width: 90%;
-            font-weight: 500;
-            
-            >*{
-                overflow: hidden;
-            }
-
-            div:nth-child(1){
-                font-size: 1.7rem;
-                line-height: 2.5rem;
-
-            }
-
-            .aboutme--highlights {
-                margin-top: 2rem;
-                
-                p {
-                    font-family: 'Merriweather', serif;
-                    overflow: hidden;
-                    border-bottom: 1px solid rgba(255, 230, 0, .9);
-                    width: 10rem;
-                }
-
-                ul {
-                    font-family: 'Inconsolata', monospace;
-                    margin-top: 1rem;
-                    list-style-type: none;
-                    list-style-position: inside;
-                    
-                    li {
-                        display: flex;
-                        flex-direction: row;
-                        justify-content: flex-start;
-                        align-items: center;
-                        line-height: 2.3rem;
-                    }
-                    
-                    li::before {
-                        content: "";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
-                        display: block; /* Needed to add space between the bullet and the text */
-                        width: .5rem; /* Also needed for space (tweak if needed) */
-                        height: .5rem;
-                        background-color: rgb(0, 255, 0);
-                        border-radius: 50%;
-                        margin: 0 1rem;
-                    }
-                }
-                
-            }
+        span:last-child {
+          width: 40%;
+          height: .2rem;
+          border-radius: 10%;
+          background-color: rgb(0, 255, 255);
+          position: absolute;
+          z-index: -1;
+          box-shadow: 0 0 .5rem .1rem rgb(0, 255, 0);
+          animation: shyning 2s ease infinite;
         }
+
+        @keyframes shyning {
+          0% {
+            width: 40%;
+          }
+
+          25% {
+            width: 45%;
+            box-shadow: 0 0 .5rem .1rem rgb(0, 255, 255);
+          }
+
+          50% {
+            width: 45%;
+            box-shadow: 0 0 .5rem .1rem rgb(0, 255, 255);
+          }
+
+          75% {
+            width: 45%;
+            box-shadow: 0 0 .5rem .1rem rgb(0, 255, 255);
+          }
+
+          100% {
+            width: 40%;
+          }
+        }
+      }
     }
+
+    .aboutme__content {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: flex-start;
+      height: 60%;
+      width: 90%;
+      font-weight: 500;
+
+      >* {
+        overflow: hidden;
+      }
+
+      div:nth-child(1) {
+        font-size: 1.7rem;
+        line-height: 2.5rem;
+
+      }
+
+      .aboutme__highlights {
+        margin-top: 2rem;
+        width: 100%;
+
+        p {
+          font-family: 'Merriweather', serif;
+          overflow: hidden;
+          border-bottom: 1px solid rgba(255, 230, 0, .9);
+          width: max-content;
+          margin-right: auto;
+        }
+
+        ul {
+          font-family: 'Inconsolata', monospace;
+          margin-top: 1rem;
+          list-style-type: none;
+          list-style-position: inside;
+
+          li {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
+            line-height: 2.3rem;
+          }
+
+          li::before {
+            content: "";
+            /* Add content: \2022 is the CSS Code/unicode for a bullet */
+            display: block;
+            /* Needed to add space between the bullet and the text */
+            width: .5rem;
+            /* Also needed for space (tweak if needed) */
+            height: .5rem;
+            background-color: rgb(0, 255, 0);
+            border-radius: 50%;
+            margin: 0 1rem;
+          }
+        }
+
+      }
+    }
+  }
 }
 
 @media screen and (max-width: 800px) {
-    .aboutme-container{
+  .aboutme-container {
 
-        .aboutme-card-container {
-        
-            .aboutme--header{
-                h2 {
-                    font-size: 1.8em;
-                }
+    .aboutme-card-container {
 
-                h4{ 
-                    font-size: 1.5rem;
-                }
-            }
-    
-            .aboutme--content {
-                
-                >*{
-                    overflow: hidden;
-                }
-
-                div:nth-child(1){
-                  font-size: 1.5rem;
-                  line-height: 2.2rem;
-  
-              }
-    
-                .aboutme--highlights {
-                    margin-top: 2rem;
-                    
-                    p {
-                        font-size: 1.5rem;
-                    }
-
-                    ul {
-                        margin-top: 1rem;
-                        
-                        li {
-                            line-height: 2.3rem;
-                            font-size: 1.4rem;
-                        }
-                    }
-                }
-            }
+      .aboutme__header {
+        h2 {
+          font-size: 1.8em;
         }
+
+        h4 {
+          font-size: 1.5rem;
+        }
+      }
+
+      .aboutme__content {
+
+        >* {
+          overflow: hidden;
+        }
+
+        div:nth-child(1) {
+          font-size: 1.5rem;
+          line-height: 2.2rem;
+
+        }
+
+        .aboutme__highlights {
+          margin-top: 2rem;
+
+          p {
+            font-size: 1.5rem;
+          }
+
+          ul {
+            margin-top: 1rem;
+
+            li {
+              line-height: 2.3rem;
+              font-size: 1.4rem;
+            }
+          }
+        }
+      }
     }
+  }
 }
 
 @media screen and (max-width: 587px) {
-  .aboutme-container{
+  .aboutme-container {
 
-      .aboutme-card-container {
-      
-          .aboutme--header{
-              h2 {
-                  font-size: 1.8em;
-              }
+    .aboutme-card-container {
 
-              h4{ 
-                  font-size: 1.4rem;
-              }
-          }
-  
-          .aboutme--content {
-              
-              >*{
-                  overflow: hidden;
-              }
+      .aboutme__header {
+        h2 {
+          font-size: 1.8em;
+        }
 
-              div:nth-child(1){
-                font-size: 1.4rem;
-                line-height: 2rem;
-
-            }
-  
-              .aboutme--highlights {
-                  margin-top: 1rem;
-                  
-                  p {
-                      font-size: 1.4rem;
-                      width: 8.7rem;
-                  }
-
-                  ul {
-                      margin-top: 1rem;
-                      
-                      li {
-                          line-height: 2.3rem;
-                          font-size: 1.4rem;
-                      }
-                  }
-              }
-          }
+        h4 {
+          font-size: 1.4rem;
+        }
       }
+
+      .aboutme__content {
+
+        >* {
+          overflow: hidden;
+        }
+
+        div:nth-child(1) {
+          font-size: 1.4rem;
+          line-height: 2rem;
+
+        }
+
+        .aboutme__highlights {
+          margin-top: 1rem;
+
+          p {
+            font-size: 1.4rem;
+          }
+
+          ul {
+            margin-top: 1rem;
+
+            li {
+              line-height: 2.3rem;
+              font-size: 1.4rem;
+            }
+          }
+        }
+      }
+    }
   }
 }
 
 @media screen and (max-width: 519px) {
-  .aboutme-container{
+  .aboutme-container {
 
-      .aboutme-card-container {
-      
-          .aboutme--header{
-            margin-bottom: 0rem;
+    .aboutme-card-container {
 
-              h2 {
-                  font-size: 1.7em;
-              }
+      .aboutme__header {
+        margin-bottom: 0rem;
 
-              h4{ 
-                  font-size: 1.4rem;
-              }
-          }
-  
-          .aboutme--content {
-              
-              >*{
-                  overflow: hidden;
-              }
+        h2 {
+          font-size: 1.7em;
+        }
 
-              div:nth-child(1){
-                font-size: 1.3rem;
-                line-height: 2rem;
-
-            }
-  
-              .aboutme--highlights {
-                  margin-top: 1rem;
-                  
-                  p {
-                      font-size: 1.3rem;
-                      width: 8.7rem;
-                  }
-
-                  ul {
-                      margin-top: 1rem;
-                      
-                      li {
-                          line-height: 2rem;
-                          font-size: 1.3rem;
-                      }
-                  }
-              }
-          }
+        h4 {
+          font-size: 1.4rem;
+        }
       }
+
+      .aboutme__content {
+
+        >* {
+          overflow: hidden;
+        }
+
+        div:nth-child(1) {
+          font-size: 1.3rem;
+          line-height: 2rem;
+
+        }
+
+        .aboutme__highlights {
+          margin-top: 1rem;
+
+          p {
+            font-size: 1.3rem;
+          }
+
+          ul {
+            margin-top: 1rem;
+
+            li {
+              line-height: 2rem;
+              font-size: 1.3rem;
+            }
+          }
+        }
+      }
+    }
   }
 }
 
 @media screen and (max-width: 419px) {
-  .aboutme-container{
+  .aboutme-container {
 
-      .aboutme-card-container {
-      
-          .aboutme--header{
-              h2 {
-                  font-size: 1.6em;
-              }
+    .aboutme-card-container {
 
-              h4{ 
-                  font-size: 1.3rem;
-              }
-          }
-  
-          .aboutme--content {
-              
-              >*{
-                  overflow: hidden;
-              }
+      .aboutme__header {
+        h2 {
+          font-size: 1.6em;
+        }
 
-              div:nth-child(1){
-                font-size: 1.2rem;
-                line-height: 2rem;
-
-            }
-  
-              .aboutme--highlights {
-                  margin-top: 1rem;
-                  
-                  p {
-                      font-size: 1.2rem;
-                      width: 7.5rem;
-                  }
-
-                  ul {
-                      margin-top: 1rem;
-                      
-                      li {
-                          line-height: 2rem;
-                          font-size: 1.2rem;
-                      }
-                  }
-              }
-          }
+        h4 {
+          font-size: 1.3rem;
+        }
       }
+
+      .aboutme__content {
+
+        >* {
+          overflow: hidden;
+        }
+
+        div:nth-child(1) {
+          font-size: 1.2rem;
+          line-height: 2rem;
+
+        }
+
+        .aboutme__highlights {
+          margin-top: 1rem;
+
+          p {
+            font-size: 1.2rem;
+          }
+
+          ul {
+            margin-top: 1rem;
+
+            li {
+              line-height: 2rem;
+              font-size: 1.2rem;
+            }
+          }
+        }
+      }
+    }
   }
 }
 
 @media screen and (max-width: 387px) {
-  .aboutme-container{
+  .aboutme-container {
 
-      .aboutme-card-container {
-      
-          .aboutme--header{
-              h2 {
-                  font-size: 1.6em;
-              }
+    .aboutme-card-container {
 
-              h4{ 
-                  font-size: 1.3rem;
-              }
-          }
-  
-          .aboutme--content {
-              
-              >*{
-                  overflow: hidden;
-              }
+      .aboutme__header {
+        h2 {
+          font-size: 1.6em;
+        }
 
-              div:nth-child(1){
-                font-size: 1.2rem;
-                line-height: 1.6rem;
-
-            }
-  
-              .aboutme--highlights {
-                  margin-top: 0rem;
-                  
-                  p {
-                      font-size: 1.2rem;
-                      width: 7.5rem;
-                  }
-
-                  ul {
-                      margin-top: .5rem;
-                      
-                      li {
-                          line-height: 1.6rem;
-                          font-size: 1.2rem;
-                      }
-                  }
-              }
-          }
+        h4 {
+          font-size: 1.3rem;
+        }
       }
+
+      .aboutme__content {
+
+        >* {
+          overflow: hidden;
+        }
+
+        div:nth-child(1) {
+          font-size: 1.2rem;
+          line-height: 1.6rem;
+
+        }
+
+        .aboutme__highlights {
+          margin-top: 0rem;
+
+          p {
+            font-size: 1.2rem;
+          }
+
+          ul {
+            margin-top: .5rem;
+
+            li {
+              line-height: 1.6rem;
+              font-size: 1.2rem;
+            }
+          }
+        }
+      }
+    }
   }
 }

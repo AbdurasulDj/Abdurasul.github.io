@@ -1,117 +1,130 @@
-.interests-container{
-    display: grid;
+.interests-container {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+
+  .interests-block {
     width: 55vw;
-    // height: 100%;
-    grid-template-columns: 1vw auto;
-    gap: 2rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    overflow: hidden;
 
-    .dot-container{
-        display: flex;
-        width: 100%;
-        height: 100%;
-        justify-content: center;
-        align-items: center;
+    .interest-info {
+      &_name {
+        font-family: 'Merriweather', serif;
+        overflow: hidden;
 
-        .dot{
-            width: 1rem;
-            height: 1rem;
-            border-radius: 1rem;
-            background-color: white;
-            
-        }
+      }
+
+      &_description {
+        margin-top: 1rem;
+        overflow: hidden;
+
+      }
     }
-    
-    .interest-info{
-        &_name {
-            font-family: 'Merriweather', serif;
-            overflow: hidden;
-
-        }
-
-        &_description {
-            margin-top: 1rem;
-            overflow: hidden;
-            
-        }
-    }
+  }
 }
 
 @media screen and (max-width: 1000px) {
-    .interest-info{
+  .interests-container {
+    .interests-block {
+      .interest-info {
         &_name {
-            font-size: 1.6rem;
+          font-size: 1.6rem;
 
         }
 
         &_description {
-            margin-top: 0.5rem;
-            font-size: 1.5rem;
-            
+          margin-top: 0.5rem;
+          font-size: 1.5rem;
+
         }
+      }
     }
+  }
 }
 
 @media screen and (max-width: 800px) {
-    .interests-container{
-        .interest-info{
-            &_name {
-                font-size: 1.4rem;
+  .interests-container {
+    .interests-block {
+      .interest-info {
+        &_name {
+          font-size: 1.4rem;
 
-            }
-
-            &_description {
-                margin-top: 0.5rem;
-                font-size: 1.4rem;
-                line-height: 1.8rem;
-                
-            }
         }
+
+        &_description {
+          margin-top: 0.5rem;
+          font-size: 1.4rem;
+          line-height: 1.8rem;
+        }
+      }
     }
+  }
 }
 
 @media screen and (max-width: 680px) {
-    .interests-container{
+  .interests-container {
+    .interests-block {
 
-        .dot-container{
+      .interest-info {
+        &_name {
+          font-size: 1.3rem;
 
-            .dot{
-                width: .5rem;
-                height: .5rem;
-                border-radius: .5rem;
-                
-            }
         }
-        
-        .interest-info{
-            &_name {
-                font-size: 1.2rem;
-                
-            }
-            
-            &_description {
-                font-size: 1.2rem;
-                line-height: 1.5rem;
-                
-            }
+
+        &_description {
+          font-size: 1.3rem;
+          line-height: 1.5rem;
+
         }
+      }
     }
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .interests-container {
+    .interests-block {
+
+
+      .interest-info {
+        &_name {
+          font-size: 1.2rem;
+
+        }
+
+        &_description {
+          font-size: 1.2rem;
+          line-height: 1.5rem;
+        }
+      }
+    }
+  }
 }
 
 
 @media screen and (max-width: 430px) {
-    .interests-container{
-        .interest-info{
-            &_name {
-                font-size: 1rem;
+  .interests-container {
+    .interests-block {
+      .interest-info {
+        &_name {
+          font-size: 1rem;
 
-            }
-
-            &_description {
-                // margin-top: 0.5rem;
-                font-size: 1rem;
-                line-height: 1.3rem;
-                
-            }
         }
+
+        &_description {
+          // margin-top: 0.5rem;
+          font-size: 1rem;
+          line-height: 1.3rem;
+
+        }
+      }
     }
+  }
 }

@@ -1,9 +1,9 @@
-import { useTranslation } from "react-i18next";
+// import { useTranslation } from "react-i18next";
 
 import "./Projects.scss";
 
 export default function Projects() {
-  const { t } = useTranslation();
+  // const { t } = useTranslation();
 
   return (
     <>

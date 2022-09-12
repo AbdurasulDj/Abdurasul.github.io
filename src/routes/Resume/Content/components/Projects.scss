@@ -8,14 +8,90 @@
 
   li {
     // line-height: 2.5rem;
-    
+
     a {
       text-decoration: none;
-      color: yellow;
-      font-family: "Merriweather",serif;
-      font-weight: 300;
+      color: rgb(229, 255, 0);
+      font-family: "Merriweather", serif;
+      font-weight: 400;
       font-size: 1.6rem;
     }
 
+    span {
+      font-size: 1.6rem;
+    }
+
+  }
+}
+
+@media only screen and (max-width: 720px) {
+  .projects-container {
+    gap: 1rem;
+
+    li {
+
+      a {
+        font-size: 1.4rem;
+      }
+
+      span {
+        font-size: 1.5rem;
+      }
+
+    }
+  }
+}
+
+@media only screen and (max-width: 505px) {
+  .projects-container {
+    gap: 1rem;
+
+    li {
+
+      a {
+        font-size: 1.3rem;
+      }
+
+      span {
+        font-size: 1.4rem;
+      }
+
+    }
+  }
+}
+
+@media only screen and (max-width: 440px) {
+  .projects-container {
+    gap: 1rem;
+
+    li {
+
+      a {
+        font-size: 1.2rem;
+      }
+
+      span {
+        font-size: 1.3rem;
+      }
+
+    }
+  }
+}
+
+@media only screen and (max-width: 380px) {
+  .projects-container {
+    gap: 1rem;
+
+    li {
+
+      a {
+        font-size: 1.1rem;
+      }
+
+      span {
+        font-size: 1.2rem;
+      }
+
+    }
   }
 }

@@ -8,11 +8,9 @@ export default function Interests() {
     const {t} = useTranslation()
     
     return(
-        <div>
-            <div className="interests-container">
-                <div className="dot-container">
-                    <div className="dot"></div>
-                </div>              
+        <div className="interests-container">
+            <div className="interests-block">
+                       
                 <div className="interest-info" >
                     <div className="interest-info_name">
                         {t('traveling')}
@@ -24,10 +22,8 @@ export default function Interests() {
 
             </div>
 
-            <div className="interests-container">
-                <div className="dot-container">
-                    <div className="dot"></div>
-                </div>              
+            <div className="interests-block">
+                           
                 <div className="interest-info" >
                     <div className="interest-info_name">
                         {t('video_games')}
@@ -39,10 +35,8 @@ export default function Interests() {
 
             </div>
 
-            <div className="interests-container">
-                <div className="dot-container">
-                    <div className="dot"></div>
-                </div>              
+            <div className="interests-block">
+                         
                 <div className="interest-info" >
                     <div className="interest-info_name">
                         {t('programming')}
