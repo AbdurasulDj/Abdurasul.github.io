@@ -1,0 +1,62 @@
+
+{
+    "about_me": "Men haqimda",
+    "why_choose_me" : "Nega men?",
+    "about_me_paragraph": "Front-end veb dasturchiman, ReactJsda mushkul saytlarni qura olish qobiliyatiga ega. Yuqori proffessional va muomilali.",
+    "about_me_highlights": "Asosiy ma'lumotlar:",
+    "about_me_li_1":  "Frontend veb dasturlash",
+    "about_me_li_2":  "Interaktiv va yagona dizayn",
+    "about_me_li_3":  "Sass yengil va tezkor",
+    "about_me_li_4":  "JavaScript va Es6+ front-endda",
+    "about_me_li_5":  "ReactJs mashhur kutubxonalardan biri",
+    "about_me_li_6":  "Git versiya boshqaruviga",
+
+    "contact_me": "Bog'laning",
+    "your_name": "Ismingiz",
+    "your_email": "Elektron pochtangiz",
+    "your_message": "Xabaringiz",
+    "send": "Jo'natish",
+
+    "hello_im": "Salom, Mening ismim ",
+    "Abdurasul": "Abdurasul",
+    "frontend_developer": "Front-end dasturchi",
+    "cross_platform_dev": "Kross Platforma sayt",
+    "javascript_react": "JavaScript / ReactJs",
+    "self_made_dev": "O'zim o'rganganman 😎",
+    "enthusiastic_about_web_dev_world": "Veb dasturlash dunyosida intuziast 🌍.",
+
+    "home_page": "Bosh sahifa",
+    "resume": "Resume",
+    "contact_me_menu": "Bog'lanish",
+    "uz": "Uz",
+    "ru": "Rus",
+    "en": "Ing",
+
+    "education": "Ta'lim",
+    "work_history": "Karyeram",
+    "skills": "Qobiliyatlar",
+    "projects": "Proyektlar",
+    "interests": "Qiziqishlar",
+
+    "tashkent_tec_university": "Islom Karimov Nomidagi Toshkent Davlat Texnika Universiteti",
+    "bachelor_degree": "Bakalavr",
+    "present": "Hozirda",
+    "tuit_liceum": "Muhammad al-Xorazmiy nomidagi TATU litseyi",
+    "basic_education": "O'rta ta'lim",
+
+    "traveling": "Sayohat",
+    "traveling_paragraph": "O'zga madaniyat,joyvarni ko'rishni, yangi do'stlarni o'rtirishni istayman",
+    "video_games": "Video o'yinlar",
+    "video_games_paragraph": "Vaqtimni MLBB, Genshin Impact, Apex va WarCraftda zoya ketqizishni yoqtiraman",
+    "programming": "Dasturlash",
+    "programming_paragraph": "Insoniyat mashina va dasturlar yaratgani men uchun juda qizziq. Texnologiya chop va tosh yordamida o'lov olishdan boshlangan, men bu Insoniyat rivojlanishi kelajagiga o'z hissamni qo'shishni istayman",
+
+    "gesys_paragraph": "Oldin men ishlagan gesys.uz ning lendingi, HTML,CSS, Bootstrap 4 va JavaScript yordamida yaratilgan.",
+    "puremilky_paragraph": "Sayt lendingi, HTML,CSS va JavaScript yordamida yaratilgan.",
+    "first_site_paragraph": "Portfoliyo saytimning birinchi versiyasi, HTML,CSS, Sass va JavaScript yordamida yaratilgan.",
+
+    "communication" : "Muomila",
+
+    "sent_text" : "jo'natildi",
+    "error_text" : "xatolik"
+}
