@@ -34,7 +34,7 @@ i18n
         //     ...etc
         // },
         allowMultiLoading: true,
-        loadPath: '/assets/locales/{{lng}}/translation.json',
+        loadPath: './assets/locales/{{lng}}/translation.json',
     },
     react: {
         useSuspense: false,
